@@ -1,0 +1,82 @@
+{
+  "validation_passed": true,
+  "checks_run": 15,
+  "failures": [],
+  "checks": {
+    "total_organizations": {
+      "computed": 100000,
+      "expected": 100000,
+      "passed": true
+    },
+    "total_industries": {
+      "computed": 147,
+      "expected": 147,
+      "passed": true
+    },
+    "total_countries": {
+      "computed": 243,
+      "expected": 243,
+      "passed": true
+    },
+    "avg_employees": {
+      "computed": 5004.0,
+      "expected": 5004.0,
+      "passed": true
+    },
+    "median_employees": {
+      "computed": 4998.0,
+      "expected": 4998.0,
+      "passed": true
+    },
+    "avg_company_age": {
+      "computed": 30.3,
+      "expected": 30.3,
+      "passed": true
+    },
+    "size_band_counts_total": {
+      "computed": 100000,
+      "expected": 100000,
+      "passed": true
+    },
+    "size_band_pct_sum": {
+      "computed": 100.0,
+      "expected": 100.0,
+      "passed": true
+    },
+    "top_industry_name": {
+      "passed": true,
+      "computed": "Insurance",
+      "expected": "Insurance"
+    },
+    "top_industry_count": {
+      "passed": true,
+      "computed": 747,
+      "expected": 747
+    },
+    "top_country_name": {
+      "passed": true,
+      "computed": "Congo",
+      "expected": "Congo"
+    },
+    "peak_founding_year": {
+      "computed": 1998,
+      "expected": 1998,
+      "passed": true
+    },
+    "peak_founding_year_count": {
+      "computed": 2022,
+      "expected": 2022,
+      "passed": true
+    },
+    "corr_founded_vs_employees": {
+      "computed": -0.00398,
+      "expected": -0.00398,
+      "passed": true
+    },
+    "name_country_dup_count": {
+      "computed": 764,
+      "expected": 764,
+      "passed": true
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "validation_passed": true,
+  "checks_run": 32,
+  "failures": [],
+  "checks": {
+    "Q01_total_rows": {
+      "got": 100000,
+      "expected": 100000,
+      "passed": true
+    },
+    "Q01_unique_org_ids": {
+      "got": 100000,
+      "expected": 100000,
+      "passed": true
+    },
+    "Q01_unique_industries": {
+      "got": 147,
+      "expected": 147,
+      "passed": true
+    },
+    "Q01_unique_countries": {
+      "got": 243,
+      "expected": 243,
+      "passed": true
+    },
+    "Q01_null_employees": {
+      "got": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    "Q01_null_industry": {
+      "got": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    "Q01_null_country": {
+      "got": 0.0,
+      "expected": 0,
+      "passed": true
+    },
+    "Q01_min_founded": {
+      "got": 1970,
+      "expected": 1970,
+      "passed": true
+    },
+    "Q01_max_founded": {
+      "got": 2022,
+      "expected": 2022,
+      "passed": true
+    },
+    "Q02_top_industry_name": {
+      "got": "Insurance",
+      "expected": "Insurance",
+      "passed": true
+    },
+    "Q02_top_industry_count": {
+      "got": 747,
+      "expected": 747,
+      "passed": true
+    },
+    "Q03_top_country_name": {
+      "got": "Congo",
+      "expected": "Congo",
+      "passed": true
+    },
+    "Q03_top_country_count": {
+      "got": 847,
+      "expected": 847,
+      "passed": true
+    },
+    "Q04_sector_total": {
+      "got": 100000,
+      "expected": 100000,
+      "passed": true
+    },
+    "Q04_sector_pct_sum": {
+      "got": 100.01,
+      "expected": 100.0,
+      "passed": true
+    },
+    "Q05_size_band_total": {
+      "got": 100000,
+      "expected": 100000,
+      "passed": true
+    },
+    "Q05_micro_count": {
+      "got": 492,
+      "expected": 492,
+      "passed": true
+    },
+    "Q05_enterprise_count": {
+      "got": 49990,
+      "expected": 49990,
+      "passed": true
+    },
+    "Q06_decade_total": {
+      "got": 100000,
+      "expected": 100000,
+      "passed": true
+    },
+    "Q06_decade_1970s_count": {
+      "got": 18863,
+      "expected": 18863,
+      "passed": true
+    },
+    "Q09_year_total": {
+      "got": 100000,
+      "expected": 100000,
+      "passed": true
+    },
+    "Q09_peak_year": {
+      "got": 1998,
+      "expected": 1998,
+      "passed": true
+    },
+    "Q09_peak_year_count": {
+      "got": 2022,
+      "expected": 2022,
+      "passed": true
+    },
+    "Q10_crosstab_total": {
+      "got": 100000,
+      "expected": 100000,
+      "passed": true
+    },
+    "Q12_p50": {
+      "got": 4998.0,
+      "expected": 4998.0,
+      "passed": true
+    },
+    "Q12_p25": {
+      "got": 2508.0,
+      "expected": 2508.0,
+      "passed": true
+    },
+    "Q12_p75": {
+      "got": 7503.0,
+      "expected": 7503.0,
+      "passed": true
+    },
+    "Q12_mean": {
+      "got": 5003.96,
+      "expected": 5003.96,
+      "passed": true
+    },
+    "Q15_dup_flag_count": {
+      "got": 764,
+      "expected": 764,
+      "passed": true
+    },
+    "Q16_total_industries": {
+      "got": 147,
+      "expected": 147,
+      "passed": true
+    },
+    "Q16_min_orgs_per_industry": {
+      "got": 626,
+      "expected": 626,
+      "passed": true
+    },
+    "Q16_max_orgs_per_industry": {
+      "got": 747,
+      "expected": 747,
+      "passed": true
+    }
+  }
+}

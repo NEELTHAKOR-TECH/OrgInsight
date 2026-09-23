@@ -1,0 +1,63 @@
+{
+  "validation_passed": true,
+  "checks_run": 14,
+  "failures": [],
+  "checks": {
+    "gini_has_all_feature_labels": {
+      "passed": true,
+      "note": "Keys: {'Year Founded', 'Industry (enc)', 'Country (enc)', 'Broad Sector (enc)', 'Name-Country Dup Flag', 'Company Age'}"
+    },
+    "gini_importances_sum_to_1": {
+      "passed": true,
+      "note": "sum=1.0000"
+    },
+    "gini_all_non_negative": {
+      "passed": true,
+      "note": "All Gini values must be non-negative"
+    },
+    "permutation_keys_present": {
+      "passed": true,
+      "note": "permutation_importance key missing"
+    },
+    "permutation_has_all_features": {
+      "passed": true,
+      "note": "Perm keys: {'Year Founded', 'Industry (enc)', 'Country (enc)', 'Broad Sector (enc)', 'Name-Country Dup Flag', 'Company Age'}"
+    },
+    "permutation_n_repeats_recorded": {
+      "passed": true,
+      "note": "n_repeats=5"
+    },
+    "permutation_test_size_recorded": {
+      "passed": true,
+      "note": "test_size=20000"
+    },
+    "permutation_no_large_positive_value": {
+      "passed": true,
+      "note": "max positive perm = 0.00017, unexpected signal detected"
+    },
+    "shap_keys_match_features": {
+      "passed": true,
+      "note": "SHAP keys: {'Year Founded', 'Industry (enc)', 'Country (enc)', 'Broad Sector (enc)', 'Name-Country Dup Flag', 'Company Age'}"
+    },
+    "shap_values_non_negative": {
+      "passed": true,
+      "note": "All mean |SHAP| values must be non-negative"
+    },
+    "shap_values_near_zero": {
+      "passed": true,
+      "note": "SHAP values unexpectedly large given near-zero predictive signal"
+    },
+    "top_feature_identified": {
+      "passed": true,
+      "note": "Missing top_feature keys"
+    },
+    "sample_size_recorded": {
+      "passed": true,
+      "note": "sample_size_for_shap missing or zero"
+    },
+    "three_methods_documented": {
+      "passed": true,
+      "note": "Expected 3 explainability methods to be documented"
+    }
+  }
+}

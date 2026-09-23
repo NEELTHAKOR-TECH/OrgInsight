@@ -1,0 +1,1943 @@
+{
+  "Q01_dataset_totals": [
+    {
+      "total_rows": 100000,
+      "unique_org_ids": 100000,
+      "unique_industries": 147,
+      "unique_countries": 243,
+      "unique_size_bands": 5,
+      "unique_sectors": 6,
+      "null_employees": 0.0,
+      "null_industry": 0.0,
+      "null_country": 0.0,
+      "min_founded": 1970,
+      "max_founded": 2022,
+      "min_age": 4,
+      "max_age": 56
+    }
+  ],
+  "Q02_top_industries_by_count": [
+    {
+      "Industry": "Insurance",
+      "org_count": 747,
+      "pct_of_total": 0.75,
+      "avg_employees": 4959.8,
+      "stddev_employees": 2867.0,
+      "min_employees": 3,
+      "max_employees": 9992
+    },
+    {
+      "Industry": "Hospital / Health Care",
+      "org_count": 739,
+      "pct_of_total": 0.74,
+      "avg_employees": 4856.6,
+      "stddev_employees": 2820.1,
+      "min_employees": 4,
+      "max_employees": 9992
+    },
+    {
+      "Industry": "Leisure / Travel",
+      "org_count": 736,
+      "pct_of_total": 0.74,
+      "avg_employees": 5088.0,
+      "stddev_employees": 2850.5,
+      "min_employees": 9,
+      "max_employees": 9987
+    },
+    {
+      "Industry": "Logistics / Procurement",
+      "org_count": 732,
+      "pct_of_total": 0.73,
+      "avg_employees": 5096.0,
+      "stddev_employees": 2916.8,
+      "min_employees": 29,
+      "max_employees": 9997
+    },
+    {
+      "Industry": "Non - Profit / Volunteering",
+      "org_count": 729,
+      "pct_of_total": 0.73,
+      "avg_employees": 5163.0,
+      "stddev_employees": 2858.6,
+      "min_employees": 19,
+      "max_employees": 9997
+    },
+    {
+      "Industry": "Publishing Industry",
+      "org_count": 726,
+      "pct_of_total": 0.73,
+      "avg_employees": 4996.2,
+      "stddev_employees": 2900.6,
+      "min_employees": 1,
+      "max_employees": 9995
+    },
+    {
+      "Industry": "Farming",
+      "org_count": 722,
+      "pct_of_total": 0.72,
+      "avg_employees": 4951.9,
+      "stddev_employees": 2917.1,
+      "min_employees": 7,
+      "max_employees": 9985
+    },
+    {
+      "Industry": "Packaging / Containers",
+      "org_count": 721,
+      "pct_of_total": 0.72,
+      "avg_employees": 4998.6,
+      "stddev_employees": 2830.4,
+      "min_employees": 4,
+      "max_employees": 9994
+    },
+    {
+      "Industry": "Religious Institutions",
+      "org_count": 721,
+      "pct_of_total": 0.72,
+      "avg_employees": 5032.4,
+      "stddev_employees": 2836.5,
+      "min_employees": 22,
+      "max_employees": 9999
+    },
+    {
+      "Industry": "Electrical / Electronic Manufacturing",
+      "org_count": 718,
+      "pct_of_total": 0.72,
+      "avg_employees": 4959.6,
+      "stddev_employees": 2941.4,
+      "min_employees": 31,
+      "max_employees": 9977
+    },
+    {
+      "Industry": "Mechanical or Industrial Engineering",
+      "org_count": 715,
+      "pct_of_total": 0.72,
+      "avg_employees": 4882.0,
+      "stddev_employees": 2930.7,
+      "min_employees": 22,
+      "max_employees": 9969
+    },
+    {
+      "Industry": "Management Consulting",
+      "org_count": 715,
+      "pct_of_total": 0.72,
+      "avg_employees": 4868.2,
+      "stddev_employees": 2931.5,
+      "min_employees": 22,
+      "max_employees": 9996
+    },
+    {
+      "Industry": "Semiconductors",
+      "org_count": 715,
+      "pct_of_total": 0.72,
+      "avg_employees": 4881.4,
+      "stddev_employees": 2825.6,
+      "min_employees": 3,
+      "max_employees": 9999
+    },
+    {
+      "Industry": "Import / Export",
+      "org_count": 714,
+      "pct_of_total": 0.71,
+      "avg_employees": 5100.9,
+      "stddev_employees": 2897.0,
+      "min_employees": 27,
+      "max_employees": 9994
+    },
+    {
+      "Industry": "Law Enforcement",
+      "org_count": 714,
+      "pct_of_total": 0.71,
+      "avg_employees": 4853.5,
+      "stddev_employees": 2957.1,
+      "min_employees": 18,
+      "max_employees": 9987
+    },
+    {
+      "Industry": "Furniture",
+      "org_count": 713,
+      "pct_of_total": 0.71,
+      "avg_employees": 4786.4,
+      "stddev_employees": 2841.5,
+      "min_employees": 4,
+      "max_employees": 9972
+    },
+    {
+      "Industry": "Internet",
+      "org_count": 711,
+      "pct_of_total": 0.71,
+      "avg_employees": 5137.0,
+      "stddev_employees": 2804.2,
+      "min_employees": 14,
+      "max_employees": 9956
+    },
+    {
+      "Industry": "Museums / Institutions",
+      "org_count": 711,
+      "pct_of_total": 0.71,
+      "avg_employees": 4857.5,
+      "stddev_employees": 2856.8,
+      "min_employees": 63,
+      "max_employees": 9998
+    },
+    {
+      "Industry": "Mining / Metals",
+      "org_count": 711,
+      "pct_of_total": 0.71,
+      "avg_employees": 5080.3,
+      "stddev_employees": 2878.3,
+      "min_employees": 4,
+      "max_employees": 9999
+    },
+    {
+      "Industry": "Public Relations / PR",
+      "org_count": 710,
+      "pct_of_total": 0.71,
+      "avg_employees": 5018.2,
+      "stddev_employees": 2846.5,
+      "min_employees": 7,
+      "max_employees": 9930
+    }
+  ],
+  "Q03_top_countries_by_count": [
+    {
+      "Country": "Congo",
+      "org_count": 847,
+      "pct_of_total": 0.85,
+      "avg_employees": 5008.3,
+      "unique_industries": 147
+    },
+    {
+      "Country": "Korea",
+      "org_count": 810,
+      "pct_of_total": 0.81,
+      "avg_employees": 4729.4,
+      "unique_industries": 143
+    },
+    {
+      "Country": "Lebanon",
+      "org_count": 477,
+      "pct_of_total": 0.48,
+      "avg_employees": 4897.6,
+      "unique_industries": 139
+    },
+    {
+      "Country": "Iraq",
+      "org_count": 470,
+      "pct_of_total": 0.47,
+      "avg_employees": 5043.4,
+      "unique_industries": 144
+    },
+    {
+      "Country": "Turkey",
+      "org_count": 469,
+      "pct_of_total": 0.47,
+      "avg_employees": 4914.2,
+      "unique_industries": 144
+    },
+    {
+      "Country": "Austria",
+      "org_count": 455,
+      "pct_of_total": 0.46,
+      "avg_employees": 4891.8,
+      "unique_industries": 138
+    },
+    {
+      "Country": "Seychelles",
+      "org_count": 454,
+      "pct_of_total": 0.45,
+      "avg_employees": 4825.9,
+      "unique_industries": 144
+    },
+    {
+      "Country": "Mauritius",
+      "org_count": 453,
+      "pct_of_total": 0.45,
+      "avg_employees": 4882.3,
+      "unique_industries": 139
+    },
+    {
+      "Country": "Singapore",
+      "org_count": 452,
+      "pct_of_total": 0.45,
+      "avg_employees": 4971.9,
+      "unique_industries": 136
+    },
+    {
+      "Country": "Costa Rica",
+      "org_count": 450,
+      "pct_of_total": 0.45,
+      "avg_employees": 5031.5,
+      "unique_industries": 144
+    },
+    {
+      "Country": "Israel",
+      "org_count": 450,
+      "pct_of_total": 0.45,
+      "avg_employees": 5012.7,
+      "unique_industries": 141
+    },
+    {
+      "Country": "Oman",
+      "org_count": 448,
+      "pct_of_total": 0.45,
+      "avg_employees": 4874.8,
+      "unique_industries": 141
+    },
+    {
+      "Country": "Vanuatu",
+      "org_count": 446,
+      "pct_of_total": 0.45,
+      "avg_employees": 5092.5,
+      "unique_industries": 138
+    },
+    {
+      "Country": "Tunisia",
+      "org_count": 445,
+      "pct_of_total": 0.45,
+      "avg_employees": 5003.7,
+      "unique_industries": 141
+    },
+    {
+      "Country": "Antarctica (the territory South of 60 deg S)",
+      "org_count": 445,
+      "pct_of_total": 0.45,
+      "avg_employees": 5091.6,
+      "unique_industries": 138
+    },
+    {
+      "Country": "Bolivia",
+      "org_count": 445,
+      "pct_of_total": 0.45,
+      "avg_employees": 4845.1,
+      "unique_industries": 141
+    },
+    {
+      "Country": "Namibia",
+      "org_count": 443,
+      "pct_of_total": 0.44,
+      "avg_employees": 5248.4,
+      "unique_industries": 137
+    },
+    {
+      "Country": "China",
+      "org_count": 443,
+      "pct_of_total": 0.44,
+      "avg_employees": 5034.9,
+      "unique_industries": 140
+    },
+    {
+      "Country": "Ireland",
+      "org_count": 443,
+      "pct_of_total": 0.44,
+      "avg_employees": 5094.3,
+      "unique_industries": 140
+    },
+    {
+      "Country": "Indonesia",
+      "org_count": 442,
+      "pct_of_total": 0.44,
+      "avg_employees": 4902.9,
+      "unique_industries": 141
+    }
+  ],
+  "Q04_sector_overview": [
+    {
+      "broad_sector": "Other",
+      "org_count": 70070,
+      "pct_of_total": 70.07,
+      "avg_employees": 5014.6,
+      "median_employees": 5022.0,
+      "stddev_employees": 2893.1,
+      "min_employees": 1,
+      "max_employees": 9999
+    },
+    {
+      "broad_sector": "Technology",
+      "org_count": 9536,
+      "pct_of_total": 9.54,
+      "avg_employees": 5017.9,
+      "median_employees": 4989.0,
+      "stddev_employees": 2862.0,
+      "min_employees": 1,
+      "max_employees": 9999
+    },
+    {
+      "broad_sector": "Healthcare",
+      "org_count": 5413,
+      "pct_of_total": 5.41,
+      "avg_employees": 4918.5,
+      "median_employees": 4900.0,
+      "stddev_employees": 2905.0,
+      "min_employees": 1,
+      "max_employees": 9999
+    },
+    {
+      "broad_sector": "Finance",
+      "org_count": 5407,
+      "pct_of_total": 5.41,
+      "avg_employees": 4972.8,
+      "median_employees": 4890.0,
+      "stddev_employees": 2870.4,
+      "min_employees": 3,
+      "max_employees": 9997
+    },
+    {
+      "broad_sector": "Manufacturing",
+      "org_count": 4807,
+      "pct_of_total": 4.81,
+      "avg_employees": 5013.1,
+      "median_employees": 5004.0,
+      "stddev_employees": 2889.8,
+      "min_employees": 4,
+      "max_employees": 9995
+    },
+    {
+      "broad_sector": "Services",
+      "org_count": 4767,
+      "pct_of_total": 4.77,
+      "avg_employees": 4943.1,
+      "median_employees": 4918.0,
+      "stddev_employees": 2893.7,
+      "min_employees": 4,
+      "max_employees": 9997
+    }
+  ],
+  "Q05_size_band_distribution": [
+    {
+      "size_band": "Micro",
+      "org_count": 492,
+      "pct_of_total": 0.49,
+      "avg_employees": 25.6,
+      "min_employees": 1,
+      "max_employees": 49,
+      "avg_age_years": 29.9
+    },
+    {
+      "size_band": "Small",
+      "org_count": 1994,
+      "pct_of_total": 1.99,
+      "avg_employees": 149.5,
+      "min_employees": 50,
+      "max_employees": 249,
+      "avg_age_years": 30.3
+    },
+    {
+      "size_band": "Medium",
+      "org_count": 7537,
+      "pct_of_total": 7.54,
+      "avg_employees": 620.7,
+      "min_employees": 250,
+      "max_employees": 999,
+      "avg_age_years": 30.2
+    },
+    {
+      "size_band": "Large",
+      "org_count": 39987,
+      "pct_of_total": 39.99,
+      "avg_employees": 3006.7,
+      "min_employees": 1000,
+      "max_employees": 4999,
+      "avg_age_years": 30.2
+    },
+    {
+      "size_band": "Enterprise",
+      "org_count": 49990,
+      "pct_of_total": 49.99,
+      "avg_employees": 7505.1,
+      "min_employees": 5000,
+      "max_employees": 9999,
+      "avg_age_years": 30.3
+    }
+  ],
+  "Q06_founding_decade_trends": [
+    {
+      "decade": 1970,
+      "orgs_founded": 18863,
+      "pct_of_total": 18.86,
+      "avg_employees": 5010.7,
+      "stddev_employees": 2897.7,
+      "avg_age_years": 51.5
+    },
+    {
+      "decade": 1980,
+      "orgs_founded": 19163,
+      "pct_of_total": 19.16,
+      "avg_employees": 5048.2,
+      "stddev_employees": 2892.9,
+      "avg_age_years": 41.5
+    },
+    {
+      "decade": 1990,
+      "orgs_founded": 19196,
+      "pct_of_total": 19.2,
+      "avg_employees": 4978.1,
+      "stddev_employees": 2890.3,
+      "avg_age_years": 31.5
+    },
+    {
+      "decade": 2000,
+      "orgs_founded": 19174,
+      "pct_of_total": 19.17,
+      "avg_employees": 5003.8,
+      "stddev_employees": 2873.3,
+      "avg_age_years": 21.5
+    },
+    {
+      "decade": 2010,
+      "orgs_founded": 19022,
+      "pct_of_total": 19.02,
+      "avg_employees": 4968.3,
+      "stddev_employees": 2891.4,
+      "avg_age_years": 11.5
+    },
+    {
+      "decade": 2020,
+      "orgs_founded": 4582,
+      "pct_of_total": 4.58,
+      "avg_employees": 5048.1,
+      "stddev_employees": 2895.7,
+      "avg_age_years": 5.2
+    }
+  ],
+  "Q07_top_industry_per_top_country": [
+    {
+      "Country": "Congo",
+      "top_industry": "Recreational Facilities / Services",
+      "top_industry_count": 11,
+      "country_total_orgs": 847,
+      "top_industry_pct": 1.3
+    },
+    {
+      "Country": "Korea",
+      "top_industry": "Public Relations / PR",
+      "top_industry_count": 12,
+      "country_total_orgs": 810,
+      "top_industry_pct": 1.5
+    },
+    {
+      "Country": "Lebanon",
+      "top_industry": "Military Industry",
+      "top_industry_count": 10,
+      "country_total_orgs": 477,
+      "top_industry_pct": 2.1
+    },
+    {
+      "Country": "Iraq",
+      "top_industry": "Defense / Space",
+      "top_industry_count": 9,
+      "country_total_orgs": 470,
+      "top_industry_pct": 1.9
+    },
+    {
+      "Country": "Turkey",
+      "top_industry": "Publishing Industry",
+      "top_industry_count": 11,
+      "country_total_orgs": 469,
+      "top_industry_pct": 2.3
+    },
+    {
+      "Country": "Austria",
+      "top_industry": "Tobacco",
+      "top_industry_count": 8,
+      "country_total_orgs": 455,
+      "top_industry_pct": 1.8
+    },
+    {
+      "Country": "Seychelles",
+      "top_industry": "Glass / Ceramics / Concrete",
+      "top_industry_count": 7,
+      "country_total_orgs": 454,
+      "top_industry_pct": 1.5
+    },
+    {
+      "Country": "Mauritius",
+      "top_industry": "Mining / Metals",
+      "top_industry_count": 7,
+      "country_total_orgs": 453,
+      "top_industry_pct": 1.5
+    },
+    {
+      "Country": "Singapore",
+      "top_industry": "Arts / Crafts",
+      "top_industry_count": 9,
+      "country_total_orgs": 452,
+      "top_industry_pct": 2.0
+    },
+    {
+      "Country": "Israel",
+      "top_industry": "Translation / Localization",
+      "top_industry_count": 8,
+      "country_total_orgs": 450,
+      "top_industry_pct": 1.8
+    },
+    {
+      "Country": "Costa Rica",
+      "top_industry": "Consumer Services",
+      "top_industry_count": 8,
+      "country_total_orgs": 450,
+      "top_industry_pct": 1.8
+    },
+    {
+      "Country": "Oman",
+      "top_industry": "Packaging / Containers",
+      "top_industry_count": 8,
+      "country_total_orgs": 448,
+      "top_industry_pct": 1.8
+    },
+    {
+      "Country": "Vanuatu",
+      "top_industry": "Management Consulting",
+      "top_industry_count": 10,
+      "country_total_orgs": 446,
+      "top_industry_pct": 2.2
+    },
+    {
+      "Country": "Antarctica (the territory South of 60 deg S)",
+      "top_industry": "Furniture",
+      "top_industry_count": 8,
+      "country_total_orgs": 445,
+      "top_industry_pct": 1.8
+    },
+    {
+      "Country": "Tunisia",
+      "top_industry": "Hospitality",
+      "top_industry_count": 10,
+      "country_total_orgs": 445,
+      "top_industry_pct": 2.2
+    }
+  ],
+  "Q08_top10_industries_by_avg_employees": [
+    {
+      "Industry": "Media Production",
+      "org_count": 638,
+      "avg_employees": 5252.9,
+      "median_employees": 5257.0,
+      "stddev_employees": 2837.6
+    },
+    {
+      "Industry": "Newspapers / Journalism",
+      "org_count": 684,
+      "avg_employees": 5242.0,
+      "median_employees": 5199.5,
+      "stddev_employees": 2970.9
+    },
+    {
+      "Industry": "Executive Office",
+      "org_count": 699,
+      "avg_employees": 5236.3,
+      "median_employees": 5151.0,
+      "stddev_employees": 2890.3
+    },
+    {
+      "Industry": "Printing",
+      "org_count": 657,
+      "avg_employees": 5227.6,
+      "median_employees": 5206.0,
+      "stddev_employees": 2912.0
+    },
+    {
+      "Industry": "Biotechnology / Greentech",
+      "org_count": 663,
+      "avg_employees": 5223.5,
+      "median_employees": 5311.0,
+      "stddev_employees": 2901.1
+    },
+    {
+      "Industry": "Music",
+      "org_count": 672,
+      "avg_employees": 5221.9,
+      "median_employees": 5498.5,
+      "stddev_employees": 2925.1
+    },
+    {
+      "Industry": "Consumer Services",
+      "org_count": 692,
+      "avg_employees": 5217.4,
+      "median_employees": 5392.5,
+      "stddev_employees": 2913.0
+    },
+    {
+      "Industry": "Wholesale",
+      "org_count": 670,
+      "avg_employees": 5216.9,
+      "median_employees": 5412.5,
+      "stddev_employees": 3014.5
+    },
+    {
+      "Industry": "Gambling / Casinos",
+      "org_count": 686,
+      "avg_employees": 5199.5,
+      "median_employees": 5269.5,
+      "stddev_employees": 2764.2
+    },
+    {
+      "Industry": "Military Industry",
+      "org_count": 659,
+      "avg_employees": 5197.7,
+      "median_employees": 5267.0,
+      "stddev_employees": 2849.9
+    }
+  ],
+  "Q08_bottom10_industries_by_avg_employees": [
+    {
+      "Industry": "Banking / Mortgage",
+      "org_count": 659,
+      "avg_employees": 4692.7,
+      "median_employees": 4481.0,
+      "stddev_employees": 2924.8
+    },
+    {
+      "Industry": "Medical Equipment",
+      "org_count": 632,
+      "avg_employees": 4753.2,
+      "median_employees": 4740.5,
+      "stddev_employees": 2891.4
+    },
+    {
+      "Industry": "Tobacco",
+      "org_count": 639,
+      "avg_employees": 4777.1,
+      "median_employees": 4738.0,
+      "stddev_employees": 2802.3
+    },
+    {
+      "Industry": "Maritime",
+      "org_count": 694,
+      "avg_employees": 4785.6,
+      "median_employees": 4598.5,
+      "stddev_employees": 2909.0
+    },
+    {
+      "Industry": "Furniture",
+      "org_count": 713,
+      "avg_employees": 4786.4,
+      "median_employees": 4819.0,
+      "stddev_employees": 2841.5
+    },
+    {
+      "Industry": "Government Relations",
+      "org_count": 685,
+      "avg_employees": 4792.8,
+      "median_employees": 4651.0,
+      "stddev_employees": 2853.1
+    },
+    {
+      "Industry": "Environmental Services",
+      "org_count": 703,
+      "avg_employees": 4810.5,
+      "median_employees": 4647.0,
+      "stddev_employees": 2930.8
+    },
+    {
+      "Industry": "Wine / Spirits",
+      "org_count": 652,
+      "avg_employees": 4820.7,
+      "median_employees": 4789.0,
+      "stddev_employees": 2860.0
+    },
+    {
+      "Industry": "Airlines / Aviation",
+      "org_count": 668,
+      "avg_employees": 4820.8,
+      "median_employees": 4531.0,
+      "stddev_employees": 2886.1
+    },
+    {
+      "Industry": "Architecture / Planning",
+      "org_count": 653,
+      "avg_employees": 4821.9,
+      "median_employees": 4617.0,
+      "stddev_employees": 2940.0
+    }
+  ],
+  "Q09_founding_trend_by_year": [
+    {
+      "year": 1970,
+      "orgs_founded": 1907,
+      "pct_of_total": 1.907
+    },
+    {
+      "year": 1971,
+      "orgs_founded": 1967,
+      "pct_of_total": 1.967
+    },
+    {
+      "year": 1972,
+      "orgs_founded": 1899,
+      "pct_of_total": 1.899
+    },
+    {
+      "year": 1973,
+      "orgs_founded": 1843,
+      "pct_of_total": 1.843
+    },
+    {
+      "year": 1974,
+      "orgs_founded": 1878,
+      "pct_of_total": 1.878
+    },
+    {
+      "year": 1975,
+      "orgs_founded": 1886,
+      "pct_of_total": 1.886
+    },
+    {
+      "year": 1976,
+      "orgs_founded": 1892,
+      "pct_of_total": 1.892
+    },
+    {
+      "year": 1977,
+      "orgs_founded": 1875,
+      "pct_of_total": 1.875
+    },
+    {
+      "year": 1978,
+      "orgs_founded": 1836,
+      "pct_of_total": 1.836
+    },
+    {
+      "year": 1979,
+      "orgs_founded": 1880,
+      "pct_of_total": 1.88
+    },
+    {
+      "year": 1980,
+      "orgs_founded": 1966,
+      "pct_of_total": 1.966
+    },
+    {
+      "year": 1981,
+      "orgs_founded": 1915,
+      "pct_of_total": 1.915
+    },
+    {
+      "year": 1982,
+      "orgs_founded": 1848,
+      "pct_of_total": 1.848
+    },
+    {
+      "year": 1983,
+      "orgs_founded": 1898,
+      "pct_of_total": 1.898
+    },
+    {
+      "year": 1984,
+      "orgs_founded": 1894,
+      "pct_of_total": 1.894
+    },
+    {
+      "year": 1985,
+      "orgs_founded": 1968,
+      "pct_of_total": 1.968
+    },
+    {
+      "year": 1986,
+      "orgs_founded": 1902,
+      "pct_of_total": 1.902
+    },
+    {
+      "year": 1987,
+      "orgs_founded": 1883,
+      "pct_of_total": 1.883
+    },
+    {
+      "year": 1988,
+      "orgs_founded": 1933,
+      "pct_of_total": 1.933
+    },
+    {
+      "year": 1989,
+      "orgs_founded": 1956,
+      "pct_of_total": 1.956
+    },
+    {
+      "year": 1990,
+      "orgs_founded": 1878,
+      "pct_of_total": 1.878
+    },
+    {
+      "year": 1991,
+      "orgs_founded": 1872,
+      "pct_of_total": 1.872
+    },
+    {
+      "year": 1992,
+      "orgs_founded": 1939,
+      "pct_of_total": 1.939
+    },
+    {
+      "year": 1993,
+      "orgs_founded": 1876,
+      "pct_of_total": 1.876
+    },
+    {
+      "year": 1994,
+      "orgs_founded": 1904,
+      "pct_of_total": 1.904
+    },
+    {
+      "year": 1995,
+      "orgs_founded": 1923,
+      "pct_of_total": 1.923
+    },
+    {
+      "year": 1996,
+      "orgs_founded": 1951,
+      "pct_of_total": 1.951
+    },
+    {
+      "year": 1997,
+      "orgs_founded": 1932,
+      "pct_of_total": 1.932
+    },
+    {
+      "year": 1998,
+      "orgs_founded": 2022,
+      "pct_of_total": 2.022
+    },
+    {
+      "year": 1999,
+      "orgs_founded": 1899,
+      "pct_of_total": 1.899
+    },
+    {
+      "year": 2000,
+      "orgs_founded": 1940,
+      "pct_of_total": 1.94
+    },
+    {
+      "year": 2001,
+      "orgs_founded": 1976,
+      "pct_of_total": 1.976
+    },
+    {
+      "year": 2002,
+      "orgs_founded": 1928,
+      "pct_of_total": 1.928
+    },
+    {
+      "year": 2003,
+      "orgs_founded": 1911,
+      "pct_of_total": 1.911
+    },
+    {
+      "year": 2004,
+      "orgs_founded": 1887,
+      "pct_of_total": 1.887
+    },
+    {
+      "year": 2005,
+      "orgs_founded": 1895,
+      "pct_of_total": 1.895
+    },
+    {
+      "year": 2006,
+      "orgs_founded": 1928,
+      "pct_of_total": 1.928
+    },
+    {
+      "year": 2007,
+      "orgs_founded": 1874,
+      "pct_of_total": 1.874
+    },
+    {
+      "year": 2008,
+      "orgs_founded": 1869,
+      "pct_of_total": 1.869
+    },
+    {
+      "year": 2009,
+      "orgs_founded": 1966,
+      "pct_of_total": 1.966
+    },
+    {
+      "year": 2010,
+      "orgs_founded": 1803,
+      "pct_of_total": 1.803
+    },
+    {
+      "year": 2011,
+      "orgs_founded": 1942,
+      "pct_of_total": 1.942
+    },
+    {
+      "year": 2012,
+      "orgs_founded": 1894,
+      "pct_of_total": 1.894
+    },
+    {
+      "year": 2013,
+      "orgs_founded": 1966,
+      "pct_of_total": 1.966
+    },
+    {
+      "year": 2014,
+      "orgs_founded": 1908,
+      "pct_of_total": 1.908
+    },
+    {
+      "year": 2015,
+      "orgs_founded": 1921,
+      "pct_of_total": 1.921
+    },
+    {
+      "year": 2016,
+      "orgs_founded": 1960,
+      "pct_of_total": 1.96
+    },
+    {
+      "year": 2017,
+      "orgs_founded": 1904,
+      "pct_of_total": 1.904
+    },
+    {
+      "year": 2018,
+      "orgs_founded": 1877,
+      "pct_of_total": 1.877
+    },
+    {
+      "year": 2019,
+      "orgs_founded": 1847,
+      "pct_of_total": 1.847
+    },
+    {
+      "year": 2020,
+      "orgs_founded": 1892,
+      "pct_of_total": 1.892
+    },
+    {
+      "year": 2021,
+      "orgs_founded": 1934,
+      "pct_of_total": 1.934
+    },
+    {
+      "year": 2022,
+      "orgs_founded": 756,
+      "pct_of_total": 0.756
+    }
+  ],
+  "Q10_sector_size_crosstab": [
+    {
+      "broad_sector": "Finance",
+      "size_band": "Micro",
+      "org_count": 20,
+      "pct_within_sector": 0.4
+    },
+    {
+      "broad_sector": "Finance",
+      "size_band": "Small",
+      "org_count": 105,
+      "pct_within_sector": 1.9
+    },
+    {
+      "broad_sector": "Finance",
+      "size_band": "Medium",
+      "org_count": 387,
+      "pct_within_sector": 7.2
+    },
+    {
+      "broad_sector": "Finance",
+      "size_band": "Large",
+      "org_count": 2256,
+      "pct_within_sector": 41.7
+    },
+    {
+      "broad_sector": "Finance",
+      "size_band": "Enterprise",
+      "org_count": 2639,
+      "pct_within_sector": 48.8
+    },
+    {
+      "broad_sector": "Healthcare",
+      "size_band": "Micro",
+      "org_count": 34,
+      "pct_within_sector": 0.6
+    },
+    {
+      "broad_sector": "Healthcare",
+      "size_band": "Small",
+      "org_count": 112,
+      "pct_within_sector": 2.1
+    },
+    {
+      "broad_sector": "Healthcare",
+      "size_band": "Medium",
+      "org_count": 422,
+      "pct_within_sector": 7.8
+    },
+    {
+      "broad_sector": "Healthcare",
+      "size_band": "Large",
+      "org_count": 2191,
+      "pct_within_sector": 40.5
+    },
+    {
+      "broad_sector": "Healthcare",
+      "size_band": "Enterprise",
+      "org_count": 2654,
+      "pct_within_sector": 49.0
+    },
+    {
+      "broad_sector": "Manufacturing",
+      "size_band": "Micro",
+      "org_count": 17,
+      "pct_within_sector": 0.4
+    },
+    {
+      "broad_sector": "Manufacturing",
+      "size_band": "Small",
+      "org_count": 92,
+      "pct_within_sector": 1.9
+    },
+    {
+      "broad_sector": "Manufacturing",
+      "size_band": "Medium",
+      "org_count": 379,
+      "pct_within_sector": 7.9
+    },
+    {
+      "broad_sector": "Manufacturing",
+      "size_band": "Large",
+      "org_count": 1909,
+      "pct_within_sector": 39.7
+    },
+    {
+      "broad_sector": "Manufacturing",
+      "size_band": "Enterprise",
+      "org_count": 2410,
+      "pct_within_sector": 50.1
+    },
+    {
+      "broad_sector": "Other",
+      "size_band": "Micro",
+      "org_count": 354,
+      "pct_within_sector": 0.5
+    },
+    {
+      "broad_sector": "Other",
+      "size_band": "Small",
+      "org_count": 1401,
+      "pct_within_sector": 2.0
+    },
+    {
+      "broad_sector": "Other",
+      "size_band": "Medium",
+      "org_count": 5314,
+      "pct_within_sector": 7.6
+    },
+    {
+      "broad_sector": "Other",
+      "size_band": "Large",
+      "org_count": 27815,
+      "pct_within_sector": 39.7
+    },
+    {
+      "broad_sector": "Other",
+      "size_band": "Enterprise",
+      "org_count": 35186,
+      "pct_within_sector": 50.2
+    },
+    {
+      "broad_sector": "Services",
+      "size_band": "Micro",
+      "org_count": 16,
+      "pct_within_sector": 0.3
+    },
+    {
+      "broad_sector": "Services",
+      "size_band": "Small",
+      "org_count": 99,
+      "pct_within_sector": 2.1
+    },
+    {
+      "broad_sector": "Services",
+      "size_band": "Medium",
+      "org_count": 359,
+      "pct_within_sector": 7.5
+    },
+    {
+      "broad_sector": "Services",
+      "size_band": "Large",
+      "org_count": 1948,
+      "pct_within_sector": 40.9
+    },
+    {
+      "broad_sector": "Services",
+      "size_band": "Enterprise",
+      "org_count": 2345,
+      "pct_within_sector": 49.2
+    },
+    {
+      "broad_sector": "Technology",
+      "size_band": "Micro",
+      "org_count": 51,
+      "pct_within_sector": 0.5
+    },
+    {
+      "broad_sector": "Technology",
+      "size_band": "Small",
+      "org_count": 185,
+      "pct_within_sector": 1.9
+    },
+    {
+      "broad_sector": "Technology",
+      "size_band": "Medium",
+      "org_count": 676,
+      "pct_within_sector": 7.1
+    },
+    {
+      "broad_sector": "Technology",
+      "size_band": "Large",
+      "org_count": 3868,
+      "pct_within_sector": 40.6
+    },
+    {
+      "broad_sector": "Technology",
+      "size_band": "Enterprise",
+      "org_count": 4756,
+      "pct_within_sector": 49.9
+    }
+  ],
+  "Q11_most_diverse_countries": [
+    {
+      "Country": "Congo",
+      "unique_industries": 147,
+      "org_count": 847,
+      "pct_of_all_industries": 100.0
+    },
+    {
+      "Country": "Azerbaijan",
+      "unique_industries": 145,
+      "org_count": 434,
+      "pct_of_all_industries": 98.6
+    },
+    {
+      "Country": "Nicaragua",
+      "unique_industries": 145,
+      "org_count": 401,
+      "pct_of_all_industries": 98.6
+    },
+    {
+      "Country": "Iraq",
+      "unique_industries": 144,
+      "org_count": 470,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "Turkey",
+      "unique_industries": 144,
+      "org_count": 469,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "Guatemala",
+      "unique_industries": 144,
+      "org_count": 432,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "Seychelles",
+      "unique_industries": 144,
+      "org_count": 454,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "San Marino",
+      "unique_industries": 144,
+      "org_count": 406,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "Reunion",
+      "unique_industries": 144,
+      "org_count": 437,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "Western Sahara",
+      "unique_industries": 144,
+      "org_count": 428,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "Costa Rica",
+      "unique_industries": 144,
+      "org_count": 450,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "Saint Barthelemy",
+      "unique_industries": 143,
+      "org_count": 390,
+      "pct_of_all_industries": 97.3
+    },
+    {
+      "Country": "Mongolia",
+      "unique_industries": 143,
+      "org_count": 408,
+      "pct_of_all_industries": 97.3
+    },
+    {
+      "Country": "Korea",
+      "unique_industries": 143,
+      "org_count": 810,
+      "pct_of_all_industries": 97.3
+    },
+    {
+      "Country": "Puerto Rico",
+      "unique_industries": 143,
+      "org_count": 393,
+      "pct_of_all_industries": 97.3
+    }
+  ],
+  "Q12_employee_percentile_distribution": [
+    {
+      "min_val": 1,
+      "p01": 101.0,
+      "p05": 496.0,
+      "p10": 997.0,
+      "p25": 2508.0,
+      "p50": 4998.0,
+      "p75": 7503.0,
+      "p90": 9019.0,
+      "p95": 9516.0,
+      "p99": 9899.0,
+      "max_val": 9999,
+      "mean_val": 5003.96,
+      "stddev_val": 2889.47
+    }
+  ],
+  "Q13_top10_countries_by_avg_employees": [
+    {
+      "Country": "Cook Islands",
+      "org_count": 373,
+      "avg_employees": 5346.5,
+      "median_employees": 5401.0
+    },
+    {
+      "Country": "Japan",
+      "org_count": 429,
+      "avg_employees": 5335.1,
+      "median_employees": 5619.0
+    },
+    {
+      "Country": "Sudan",
+      "org_count": 424,
+      "avg_employees": 5328.1,
+      "median_employees": 5781.0
+    },
+    {
+      "Country": "Czech Republic",
+      "org_count": 397,
+      "avg_employees": 5301.8,
+      "median_employees": 5646.0
+    },
+    {
+      "Country": "French Polynesia",
+      "org_count": 404,
+      "avg_employees": 5284.8,
+      "median_employees": 5498.5
+    },
+    {
+      "Country": "Samoa",
+      "org_count": 393,
+      "avg_employees": 5283.4,
+      "median_employees": 5286.0
+    },
+    {
+      "Country": "Paraguay",
+      "org_count": 356,
+      "avg_employees": 5281.2,
+      "median_employees": 5459.0
+    },
+    {
+      "Country": "Albania",
+      "org_count": 417,
+      "avg_employees": 5269.8,
+      "median_employees": 5288.0
+    },
+    {
+      "Country": "Sri Lanka",
+      "org_count": 398,
+      "avg_employees": 5258.0,
+      "median_employees": 5367.0
+    },
+    {
+      "Country": "Faroe Islands",
+      "org_count": 393,
+      "avg_employees": 5255.5,
+      "median_employees": 5454.0
+    }
+  ],
+  "Q13_bottom10_countries_by_avg_employees": [
+    {
+      "Country": "Saint Barthelemy",
+      "org_count": 390,
+      "avg_employees": 4551.0,
+      "median_employees": 4395.0
+    },
+    {
+      "Country": "British Indian Ocean Territory (Chagos Archipelago)",
+      "org_count": 381,
+      "avg_employees": 4682.9,
+      "median_employees": 4755.0
+    },
+    {
+      "Country": "Portugal",
+      "org_count": 418,
+      "avg_employees": 4718.7,
+      "median_employees": 4678.5
+    },
+    {
+      "Country": "Korea",
+      "org_count": 810,
+      "avg_employees": 4729.4,
+      "median_employees": 4474.5
+    },
+    {
+      "Country": "Mozambique",
+      "org_count": 390,
+      "avg_employees": 4741.2,
+      "median_employees": 4417.0
+    },
+    {
+      "Country": "Vietnam",
+      "org_count": 409,
+      "avg_employees": 4752.9,
+      "median_employees": 4664.0
+    },
+    {
+      "Country": "Burundi",
+      "org_count": 399,
+      "avg_employees": 4754.8,
+      "median_employees": 4668.0
+    },
+    {
+      "Country": "Swaziland",
+      "org_count": 394,
+      "avg_employees": 4756.7,
+      "median_employees": 4756.5
+    },
+    {
+      "Country": "Ukraine",
+      "org_count": 396,
+      "avg_employees": 4757.1,
+      "median_employees": 4643.0
+    },
+    {
+      "Country": "Tajikistan",
+      "org_count": 416,
+      "avg_employees": 4763.3,
+      "median_employees": 4744.0
+    }
+  ],
+  "Q14_year_on_year_founding_change": [
+    {
+      "year": 1970,
+      "orgs_founded": 1907,
+      "prev_year_count": null,
+      "yoy_change": null,
+      "yoy_pct_change": NaN
+    },
+    {
+      "year": 1971,
+      "orgs_founded": 1967,
+      "prev_year_count": 1907,
+      "yoy_change": 60,
+      "yoy_pct_change": 3.1
+    },
+    {
+      "year": 1972,
+      "orgs_founded": 1899,
+      "prev_year_count": 1967,
+      "yoy_change": -68,
+      "yoy_pct_change": -3.5
+    },
+    {
+      "year": 1973,
+      "orgs_founded": 1843,
+      "prev_year_count": 1899,
+      "yoy_change": -56,
+      "yoy_pct_change": -2.9
+    },
+    {
+      "year": 1974,
+      "orgs_founded": 1878,
+      "prev_year_count": 1843,
+      "yoy_change": 35,
+      "yoy_pct_change": 1.9
+    },
+    {
+      "year": 1975,
+      "orgs_founded": 1886,
+      "prev_year_count": 1878,
+      "yoy_change": 8,
+      "yoy_pct_change": 0.4
+    },
+    {
+      "year": 1976,
+      "orgs_founded": 1892,
+      "prev_year_count": 1886,
+      "yoy_change": 6,
+      "yoy_pct_change": 0.3
+    },
+    {
+      "year": 1977,
+      "orgs_founded": 1875,
+      "prev_year_count": 1892,
+      "yoy_change": -17,
+      "yoy_pct_change": -0.9
+    },
+    {
+      "year": 1978,
+      "orgs_founded": 1836,
+      "prev_year_count": 1875,
+      "yoy_change": -39,
+      "yoy_pct_change": -2.1
+    },
+    {
+      "year": 1979,
+      "orgs_founded": 1880,
+      "prev_year_count": 1836,
+      "yoy_change": 44,
+      "yoy_pct_change": 2.4
+    },
+    {
+      "year": 1980,
+      "orgs_founded": 1966,
+      "prev_year_count": 1880,
+      "yoy_change": 86,
+      "yoy_pct_change": 4.6
+    },
+    {
+      "year": 1981,
+      "orgs_founded": 1915,
+      "prev_year_count": 1966,
+      "yoy_change": -51,
+      "yoy_pct_change": -2.6
+    },
+    {
+      "year": 1982,
+      "orgs_founded": 1848,
+      "prev_year_count": 1915,
+      "yoy_change": -67,
+      "yoy_pct_change": -3.5
+    },
+    {
+      "year": 1983,
+      "orgs_founded": 1898,
+      "prev_year_count": 1848,
+      "yoy_change": 50,
+      "yoy_pct_change": 2.7
+    },
+    {
+      "year": 1984,
+      "orgs_founded": 1894,
+      "prev_year_count": 1898,
+      "yoy_change": -4,
+      "yoy_pct_change": -0.2
+    },
+    {
+      "year": 1985,
+      "orgs_founded": 1968,
+      "prev_year_count": 1894,
+      "yoy_change": 74,
+      "yoy_pct_change": 3.9
+    },
+    {
+      "year": 1986,
+      "orgs_founded": 1902,
+      "prev_year_count": 1968,
+      "yoy_change": -66,
+      "yoy_pct_change": -3.4
+    },
+    {
+      "year": 1987,
+      "orgs_founded": 1883,
+      "prev_year_count": 1902,
+      "yoy_change": -19,
+      "yoy_pct_change": -1.0
+    },
+    {
+      "year": 1988,
+      "orgs_founded": 1933,
+      "prev_year_count": 1883,
+      "yoy_change": 50,
+      "yoy_pct_change": 2.7
+    },
+    {
+      "year": 1989,
+      "orgs_founded": 1956,
+      "prev_year_count": 1933,
+      "yoy_change": 23,
+      "yoy_pct_change": 1.2
+    },
+    {
+      "year": 1990,
+      "orgs_founded": 1878,
+      "prev_year_count": 1956,
+      "yoy_change": -78,
+      "yoy_pct_change": -4.0
+    },
+    {
+      "year": 1991,
+      "orgs_founded": 1872,
+      "prev_year_count": 1878,
+      "yoy_change": -6,
+      "yoy_pct_change": -0.3
+    },
+    {
+      "year": 1992,
+      "orgs_founded": 1939,
+      "prev_year_count": 1872,
+      "yoy_change": 67,
+      "yoy_pct_change": 3.6
+    },
+    {
+      "year": 1993,
+      "orgs_founded": 1876,
+      "prev_year_count": 1939,
+      "yoy_change": -63,
+      "yoy_pct_change": -3.2
+    },
+    {
+      "year": 1994,
+      "orgs_founded": 1904,
+      "prev_year_count": 1876,
+      "yoy_change": 28,
+      "yoy_pct_change": 1.5
+    },
+    {
+      "year": 1995,
+      "orgs_founded": 1923,
+      "prev_year_count": 1904,
+      "yoy_change": 19,
+      "yoy_pct_change": 1.0
+    },
+    {
+      "year": 1996,
+      "orgs_founded": 1951,
+      "prev_year_count": 1923,
+      "yoy_change": 28,
+      "yoy_pct_change": 1.5
+    },
+    {
+      "year": 1997,
+      "orgs_founded": 1932,
+      "prev_year_count": 1951,
+      "yoy_change": -19,
+      "yoy_pct_change": -1.0
+    },
+    {
+      "year": 1998,
+      "orgs_founded": 2022,
+      "prev_year_count": 1932,
+      "yoy_change": 90,
+      "yoy_pct_change": 4.7
+    },
+    {
+      "year": 1999,
+      "orgs_founded": 1899,
+      "prev_year_count": 2022,
+      "yoy_change": -123,
+      "yoy_pct_change": -6.1
+    },
+    {
+      "year": 2000,
+      "orgs_founded": 1940,
+      "prev_year_count": 1899,
+      "yoy_change": 41,
+      "yoy_pct_change": 2.2
+    },
+    {
+      "year": 2001,
+      "orgs_founded": 1976,
+      "prev_year_count": 1940,
+      "yoy_change": 36,
+      "yoy_pct_change": 1.9
+    },
+    {
+      "year": 2002,
+      "orgs_founded": 1928,
+      "prev_year_count": 1976,
+      "yoy_change": -48,
+      "yoy_pct_change": -2.4
+    },
+    {
+      "year": 2003,
+      "orgs_founded": 1911,
+      "prev_year_count": 1928,
+      "yoy_change": -17,
+      "yoy_pct_change": -0.9
+    },
+    {
+      "year": 2004,
+      "orgs_founded": 1887,
+      "prev_year_count": 1911,
+      "yoy_change": -24,
+      "yoy_pct_change": -1.3
+    },
+    {
+      "year": 2005,
+      "orgs_founded": 1895,
+      "prev_year_count": 1887,
+      "yoy_change": 8,
+      "yoy_pct_change": 0.4
+    },
+    {
+      "year": 2006,
+      "orgs_founded": 1928,
+      "prev_year_count": 1895,
+      "yoy_change": 33,
+      "yoy_pct_change": 1.7
+    },
+    {
+      "year": 2007,
+      "orgs_founded": 1874,
+      "prev_year_count": 1928,
+      "yoy_change": -54,
+      "yoy_pct_change": -2.8
+    },
+    {
+      "year": 2008,
+      "orgs_founded": 1869,
+      "prev_year_count": 1874,
+      "yoy_change": -5,
+      "yoy_pct_change": -0.3
+    },
+    {
+      "year": 2009,
+      "orgs_founded": 1966,
+      "prev_year_count": 1869,
+      "yoy_change": 97,
+      "yoy_pct_change": 5.2
+    },
+    {
+      "year": 2010,
+      "orgs_founded": 1803,
+      "prev_year_count": 1966,
+      "yoy_change": -163,
+      "yoy_pct_change": -8.3
+    },
+    {
+      "year": 2011,
+      "orgs_founded": 1942,
+      "prev_year_count": 1803,
+      "yoy_change": 139,
+      "yoy_pct_change": 7.7
+    },
+    {
+      "year": 2012,
+      "orgs_founded": 1894,
+      "prev_year_count": 1942,
+      "yoy_change": -48,
+      "yoy_pct_change": -2.5
+    },
+    {
+      "year": 2013,
+      "orgs_founded": 1966,
+      "prev_year_count": 1894,
+      "yoy_change": 72,
+      "yoy_pct_change": 3.8
+    },
+    {
+      "year": 2014,
+      "orgs_founded": 1908,
+      "prev_year_count": 1966,
+      "yoy_change": -58,
+      "yoy_pct_change": -3.0
+    },
+    {
+      "year": 2015,
+      "orgs_founded": 1921,
+      "prev_year_count": 1908,
+      "yoy_change": 13,
+      "yoy_pct_change": 0.7
+    },
+    {
+      "year": 2016,
+      "orgs_founded": 1960,
+      "prev_year_count": 1921,
+      "yoy_change": 39,
+      "yoy_pct_change": 2.0
+    },
+    {
+      "year": 2017,
+      "orgs_founded": 1904,
+      "prev_year_count": 1960,
+      "yoy_change": -56,
+      "yoy_pct_change": -2.9
+    },
+    {
+      "year": 2018,
+      "orgs_founded": 1877,
+      "prev_year_count": 1904,
+      "yoy_change": -27,
+      "yoy_pct_change": -1.4
+    },
+    {
+      "year": 2019,
+      "orgs_founded": 1847,
+      "prev_year_count": 1877,
+      "yoy_change": -30,
+      "yoy_pct_change": -1.6
+    },
+    {
+      "year": 2020,
+      "orgs_founded": 1892,
+      "prev_year_count": 1847,
+      "yoy_change": 45,
+      "yoy_pct_change": 2.4
+    },
+    {
+      "year": 2021,
+      "orgs_founded": 1934,
+      "prev_year_count": 1892,
+      "yoy_change": 42,
+      "yoy_pct_change": 2.2
+    },
+    {
+      "year": 2022,
+      "orgs_founded": 756,
+      "prev_year_count": 1934,
+      "yoy_change": -1178,
+      "yoy_pct_change": -60.9
+    }
+  ],
+  "Q15_name_country_dup_flag_summary": [
+    {
+      "dup_flag": 0,
+      "org_count": 99236,
+      "pct_of_total": 99.24,
+      "avg_employees": 5003.1,
+      "stddev_employees": 2889.4
+    },
+    {
+      "dup_flag": 1,
+      "org_count": 764,
+      "pct_of_total": 0.76,
+      "avg_employees": 5120.4,
+      "stddev_employees": 2900.8
+    }
+  ],
+  "Q16_industry_spread_uniformity": [
+    {
+      "total_industries": 147,
+      "min_orgs_per_industry": 626,
+      "max_orgs_per_industry": 747,
+      "avg_orgs_per_industry": 680.3,
+      "stddev_orgs_per_industry": 24.86,
+      "count_range": 121,
+      "coeff_of_variation_pct": 3.65
+    }
+  ],
+  "Q17_peak_and_trough_founding_years": [
+    {
+      "year": 1998,
+      "orgs_founded": 2022,
+      "category": "top_5"
+    },
+    {
+      "year": 2001,
+      "orgs_founded": 1976,
+      "category": "top_5"
+    },
+    {
+      "year": 1985,
+      "orgs_founded": 1968,
+      "category": "top_5"
+    },
+    {
+      "year": 1971,
+      "orgs_founded": 1967,
+      "category": "top_5"
+    },
+    {
+      "year": 2013,
+      "orgs_founded": 1966,
+      "category": "top_5"
+    },
+    {
+      "year": 2019,
+      "orgs_founded": 1847,
+      "category": "bottom_5"
+    },
+    {
+      "year": 1973,
+      "orgs_founded": 1843,
+      "category": "bottom_5"
+    },
+    {
+      "year": 1978,
+      "orgs_founded": 1836,
+      "category": "bottom_5"
+    },
+    {
+      "year": 2010,
+      "orgs_founded": 1803,
+      "category": "bottom_5"
+    },
+    {
+      "year": 2022,
+      "orgs_founded": 756,
+      "category": "bottom_5"
+    }
+  ],
+  "Q18_sector_enterprise_rate": [
+    {
+      "broad_sector": "Other",
+      "total_orgs": 70070,
+      "enterprise_count": 35186.0,
+      "micro_count": 354.0,
+      "enterprise_pct": 50.22,
+      "micro_pct": 0.51,
+      "avg_employees": 5014.6
+    },
+    {
+      "broad_sector": "Manufacturing",
+      "total_orgs": 4807,
+      "enterprise_count": 2410.0,
+      "micro_count": 17.0,
+      "enterprise_pct": 50.14,
+      "micro_pct": 0.35,
+      "avg_employees": 5013.1
+    },
+    {
+      "broad_sector": "Technology",
+      "total_orgs": 9536,
+      "enterprise_count": 4756.0,
+      "micro_count": 51.0,
+      "enterprise_pct": 49.87,
+      "micro_pct": 0.53,
+      "avg_employees": 5017.9
+    },
+    {
+      "broad_sector": "Services",
+      "total_orgs": 4767,
+      "enterprise_count": 2345.0,
+      "micro_count": 16.0,
+      "enterprise_pct": 49.19,
+      "micro_pct": 0.34,
+      "avg_employees": 4943.1
+    },
+    {
+      "broad_sector": "Healthcare",
+      "total_orgs": 5413,
+      "enterprise_count": 2654.0,
+      "micro_count": 34.0,
+      "enterprise_pct": 49.03,
+      "micro_pct": 0.63,
+      "avg_employees": 4918.5
+    },
+    {
+      "broad_sector": "Finance",
+      "total_orgs": 5407,
+      "enterprise_count": 2639.0,
+      "micro_count": 20.0,
+      "enterprise_pct": 48.81,
+      "micro_pct": 0.37,
+      "avg_employees": 4972.8
+    }
+  ]
+}

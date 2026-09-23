@@ -1,0 +1,195 @@
+{
+  "pipeline_run_date": "2026-09-23",
+  "reference_year_for_company_age": 2026,
+  "schema_check": {
+    "missing_columns": [],
+    "extra_columns": []
+  },
+  "quality_pre": {
+    "total_rows": 100000,
+    "null_counts": {
+      "Index": 0,
+      "Organization Id": 0,
+      "Name": 0,
+      "Website": 0,
+      "Country": 0,
+      "Description": 0,
+      "Founded": 0,
+      "Industry": 0,
+      "Number of employees": 0
+    },
+    "empty_string_counts": {
+      "Index": 0,
+      "Organization Id": 0,
+      "Name": 0,
+      "Website": 0,
+      "Country": 0,
+      "Description": 0,
+      "Founded": 0,
+      "Industry": 0,
+      "Number of employees": 0
+    },
+    "whitespace_only_counts": {
+      "Index": 0,
+      "Organization Id": 0,
+      "Name": 0,
+      "Website": 0,
+      "Country": 0,
+      "Description": 0,
+      "Founded": 0,
+      "Industry": 0,
+      "Number of employees": 0
+    },
+    "duplicate_full_rows": 0,
+    "duplicate_org_ids": 0,
+    "duplicate_names": 27585,
+    "duplicate_name_country_pairs": 764,
+    "duplicate_name_country_industry_pairs": 6,
+    "duplicate_name_country_industry_sample": [
+      {
+        "Organization Id": "bf0CAB2E8747f9b",
+        "Name": "Lopez LLC",
+        "Country": "Luxembourg",
+        "Industry": "Maritime",
+        "Founded": "1996"
+      },
+      {
+        "Organization Id": "e6511cF8B47cC4d",
+        "Name": "Lopez LLC",
+        "Country": "Luxembourg",
+        "Industry": "Maritime",
+        "Founded": "1983"
+      },
+      {
+        "Organization Id": "C81bEA4eF74cfBb",
+        "Name": "Robertson and Sons",
+        "Country": "Belgium",
+        "Industry": "Airlines / Aviation",
+        "Founded": "1993"
+      },
+      {
+        "Organization Id": "7Fbf9a1c085c1Be",
+        "Name": "Robertson and Sons",
+        "Country": "Belgium",
+        "Industry": "Airlines / Aviation",
+        "Founded": "1986"
+      },
+      {
+        "Organization Id": "1FBBBd75fedf1e0",
+        "Name": "Sandoval LLC",
+        "Country": "Zambia",
+        "Industry": "Mental Health Care",
+        "Founded": "1994"
+      },
+      {
+        "Organization Id": "91f8a2592eeAfa0",
+        "Name": "Sandoval LLC",
+        "Country": "Zambia",
+        "Industry": "Mental Health Care",
+        "Founded": "1987"
+      }
+    ],
+    "org_id_format_violations": 0,
+    "org_id_length_distribution": {
+      "15": 100000
+    },
+    "founded_nulls_after_coerce": 0,
+    "founded_min": 1970,
+    "founded_max": 2022,
+    "founded_below_min": 0,
+    "founded_above_max": 0,
+    "founded_unique_values": 53,
+    "founded_zscore_outliers_gt3": 0,
+    "employees_nulls_after_coerce": 0,
+    "employees_min": 1,
+    "employees_max": 9999,
+    "employees_mean": 5003.96,
+    "employees_median": 4998.0,
+    "employees_std": 2889.47,
+    "employees_zero_or_negative": 0,
+    "employees_iqr_lower_fence": -4984.5,
+    "employees_iqr_upper_fence": 14995.5,
+    "employees_iqr_outliers_below": 0,
+    "employees_iqr_outliers_above": 0,
+    "employees_zscore_outliers_gt3": 0,
+    "unique_industries": 147,
+    "unique_industries_case_insensitive": 147,
+    "unique_countries": 243,
+    "unique_countries_case_insensitive": 243,
+    "industry_whitespace_issues": 0,
+    "country_whitespace_issues": 0,
+    "website_not_http": 0,
+    "website_with_spaces": 0,
+    "name_non_ascii": 0,
+    "country_non_ascii": 0
+  },
+  "quality_post": {
+    "row_count": 100000,
+    "column_count": 14,
+    "derived_columns_present": [
+      "company_age",
+      "founding_decade",
+      "size_band",
+      "broad_sector",
+      "is_name_country_dup"
+    ],
+    "null_counts_post": {
+      "Organization Id": 0,
+      "Name": 0,
+      "Country": 0,
+      "Industry": 0,
+      "Founded": 0,
+      "Number of employees": 0,
+      "company_age": 0,
+      "founding_decade": 0,
+      "size_band": 0,
+      "broad_sector": 0
+    },
+    "size_band_unknown_count": 0,
+    "size_band_distribution": {
+      "Micro": 492,
+      "Small": 1994,
+      "Medium": 7537,
+      "Large": 39987,
+      "Enterprise": 49990
+    },
+    "negative_company_age_count": 0,
+    "company_age_reference_year": 2026,
+    "founding_decade_range": [
+      1970,
+      2020
+    ],
+    "broad_sector_distribution": {
+      "Other": 70070,
+      "Technology": 9536,
+      "Healthcare": 5413,
+      "Finance": 5407,
+      "Manufacturing": 4807,
+      "Services": 4767
+    },
+    "is_name_country_dup_invalid_values": 0,
+    "is_name_country_dup_flagged_count": 764,
+    "duplicate_org_ids_post": 0,
+    "validation_passed": true,
+    "failures": []
+  },
+  "preprocessing_decisions": [
+    "All 9 raw columns preserved unchanged in output.",
+    "Founded and Number of employees coerced from string to Int64; coercion failures reported.",
+    "company_age derived dynamically as 2026 - Founded (reference year updates each run).",
+    "founding_decade = Founded // 10 * 10.",
+    "size_band assigned using EU SME thresholds: Micro<50, Small 50-249, Medium 250-999, Large 1000-4999, Enterprise 5000+.",
+    "broad_sector derived from Industry keyword matching across 5 macro-sectors (Technology, Finance, Healthcare, Manufacturing, Services); unmatched \u2192 'Other'.",
+    "is_name_country_dup flag (0/1) added: marks 764 rows sharing the same Name+Country. All have unique Organization Ids \u2014 rows retained, not dropped.",
+    "No rows dropped: zero nulls, zero invalid types, zero out-of-range values, zero statistical outliers.",
+    "Original raw file preserved unchanged at data/raw/."
+  ],
+  "problems_found": [
+    "27,585 duplicate Name values \u2014 expected in a global dataset; businesses share names. Organization Id is the unique key.",
+    "764 rows share the same Name+Country \u2014 all have distinct Organization Ids and different Industry/Founded values. Flagged via is_name_country_dup column; not dropped.",
+    "6 rows share Name+Country+Industry \u2014 distinct Organization Ids and different Founded years; treated as legitimately different organizations.",
+    "No statistical outliers in Number of employees (IQR fences: -4,984.5 to 14,995.5; z-score range: -1.73 to +1.73) \u2014 uniform distribution by dataset design.",
+    "broad_sector 'Other' covers 70.1% of records (70,070 rows) \u2014 70 of 147 industry labels contain none of the 5 sector keywords. This is a known limitation of the keyword-matching approach, not a data defect.",
+    "company_age was previously hard-coded to reference year 2024. Fixed: now uses datetime.date.today().year."
+  ]
+}

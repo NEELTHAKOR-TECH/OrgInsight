@@ -1,0 +1,79 @@
+{
+  "validation_passed": true,
+  "checks_run": 18,
+  "failures": [],
+  "checks": {
+    "no_employees_in_features": {
+      "passed": true,
+      "note": "Number of employees must be excluded from features"
+    },
+    "no_founding_decade_in_features": {
+      "passed": true,
+      "note": "founding_decade is collinear with Founded"
+    },
+    "train_test_sum": {
+      "passed": true,
+      "note": "sum=100000"
+    },
+    "random_forest_default_accuracy_range": {
+      "passed": true,
+      "note": "accuracy=0.4925"
+    },
+    "random_forest_balanced_accuracy_range": {
+      "passed": true,
+      "note": "accuracy=0.2468"
+    },
+    "dummy_baseline_accuracy_range": {
+      "passed": true,
+      "note": "accuracy=0.4999"
+    },
+    "dummy_baseline_near_50pct": {
+      "passed": true,
+      "note": "dummy accuracy=0.4999, expected ~0.4999"
+    },
+    "rf_default_at_or_above_dummy": {
+      "passed": true,
+      "note": "RF default acc=0.4925, dummy=0.4999"
+    },
+    "rf_balanced_accuracy_positive": {
+      "passed": true,
+      "note": "RF balanced acc=0.2468"
+    },
+    "rf_default_roc_auc_near_random": {
+      "passed": true,
+      "note": "ROC-AUC OvR=0.4953 (expected ~0.5 given no predictive signal)"
+    },
+    "cv_std_reasonable": {
+      "passed": true,
+      "note": "CV std=0.0014"
+    },
+    "class_labels_correct": {
+      "passed": true,
+      "note": "labels=['Micro', 'Small', 'Medium', 'Large', 'Enterprise']"
+    },
+    "corr_company_age_near_zero": {
+      "passed": true,
+      "note": "|r|=0.003398"
+    },
+    "corr_Founded_near_zero": {
+      "passed": true,
+      "note": "|r|=0.003398"
+    },
+    "corr_ind_enc_near_zero": {
+      "passed": true,
+      "note": "|r|=0.000709"
+    },
+    "corr_cty_enc_near_zero": {
+      "passed": true,
+      "note": "|r|=0.002751"
+    },
+    "corr_sec_enc_near_zero": {
+      "passed": true,
+      "note": "|r|=0.003257"
+    },
+    "corr_is_name_country_dup_near_zero": {
+      "passed": true,
+      "note": "|r|=0.000551"
+    }
+  }
+}

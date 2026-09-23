@@ -1,0 +1,479 @@
+{
+  "task": "multi_class_classification",
+  "target": "size_band",
+  "target_classes": [
+    "Micro",
+    "Small",
+    "Medium",
+    "Large",
+    "Enterprise"
+  ],
+  "features": [
+    "company_age",
+    "Founded",
+    "industry_enc",
+    "country_enc",
+    "sector_enc",
+    "is_name_country_dup"
+  ],
+  "train_size": 80000,
+  "test_size": 20000,
+  "random_state": 42,
+  "reference_year": 2026,
+  "feature_target_correlations": {
+    "company_age": {
+      "pearson_r": 0.003398,
+      "spearman_rho": 0.003713,
+      "spearman_p": 0.240304
+    },
+    "Founded": {
+      "pearson_r": -0.003398,
+      "spearman_rho": -0.003713,
+      "spearman_p": 0.240304
+    },
+    "ind_enc": {
+      "pearson_r": -0.000709,
+      "spearman_rho": 0.000516,
+      "spearman_p": 0.870503
+    },
+    "cty_enc": {
+      "pearson_r": -0.002751,
+      "spearman_rho": -0.002901,
+      "spearman_p": 0.359021
+    },
+    "sec_enc": {
+      "pearson_r": 0.003257,
+      "spearman_rho": 0.003054,
+      "spearman_p": 0.33423
+    },
+    "is_name_country_dup": {
+      "pearson_r": -0.000551,
+      "spearman_rho": -0.000356,
+      "spearman_p": 0.910451
+    }
+  },
+  "preprocessing_note": "Number of employees excluded from features \u2014 it is the direct source of size_band and would constitute data leakage. founding_decade excluded \u2014 collinear with Founded. is_name_country_dup added as Phase 2 introduced this flag.",
+  "dummy_baseline": {
+    "model": "Dummy (most_frequent)",
+    "accuracy": 0.4999,
+    "macro_precision": 0.1,
+    "macro_recall": 0.2,
+    "macro_f1": 0.1333,
+    "weighted_f1": 0.3332,
+    "roc_auc_ovr_macro": 0.5,
+    "classification_report": {
+      "Micro": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 98.0
+      },
+      "Small": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 399.0
+      },
+      "Medium": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1507.0
+      },
+      "Large": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 7998.0
+      },
+      "Enterprise": {
+        "precision": 0.4999,
+        "recall": 1.0,
+        "f1-score": 0.6665777718514567,
+        "support": 9998.0
+      },
+      "accuracy": 0.4999,
+      "macro avg": {
+        "precision": 0.09998,
+        "recall": 0.2,
+        "f1-score": 0.13331555437029136,
+        "support": 20000.0
+      },
+      "weighted avg": {
+        "precision": 0.24990001000000003,
+        "recall": 0.4999,
+        "f1-score": 0.33322222814854324,
+        "support": 20000.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        98
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        399
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1507
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        7998
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        9998
+      ]
+    ]
+  },
+  "random_forest_default": {
+    "model": "Random Forest (default)",
+    "accuracy": 0.4925,
+    "macro_precision": 0.1808,
+    "macro_recall": 0.2003,
+    "macro_f1": 0.1568,
+    "weighted_f1": 0.3782,
+    "roc_auc_ovr_macro": 0.4953,
+    "classification_report": {
+      "Micro": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 98.0
+      },
+      "Small": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 399.0
+      },
+      "Medium": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1507.0
+      },
+      "Large": {
+        "precision": 0.40396530359355637,
+        "recall": 0.08152038009502376,
+        "f1-score": 0.13566375364128172,
+        "support": 7998.0
+      },
+      "Enterprise": {
+        "precision": 0.5002719460459045,
+        "recall": 0.9199839967993598,
+        "f1-score": 0.6481116121758738,
+        "support": 9998.0
+      },
+      "accuracy": 0.4925,
+      "macro avg": {
+        "precision": 0.18084744992789217,
+        "recall": 0.20030087537887672,
+        "f1-score": 0.1567550731634311,
+        "support": 20000.0
+      },
+      "weighted avg": {
+        "precision": 0.4116316707354108,
+        "recall": 0.4925,
+        "f1-score": 0.3782429300078679,
+        "support": 20000.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        8,
+        90
+      ],
+      [
+        0,
+        0,
+        0,
+        30,
+        369
+      ],
+      [
+        0,
+        0,
+        0,
+        124,
+        1383
+      ],
+      [
+        0,
+        0,
+        0,
+        652,
+        7346
+      ],
+      [
+        0,
+        0,
+        0,
+        800,
+        9198
+      ]
+    ],
+    "feature_importances": {
+      "company_age": 0.138633,
+      "Founded": 0.137753,
+      "industry_enc": 0.279586,
+      "country_enc": 0.384258,
+      "sector_enc": 0.05573,
+      "is_name_country_dup": 0.004041
+    }
+  },
+  "random_forest_balanced": {
+    "model": "Random Forest (balanced)",
+    "accuracy": 0.2468,
+    "macro_precision": 0.1978,
+    "macro_recall": 0.1926,
+    "macro_f1": 0.1584,
+    "weighted_f1": 0.2978,
+    "roc_auc_ovr_macro": 0.4955,
+    "classification_report": {
+      "Micro": {
+        "precision": 0.004532577903682719,
+        "recall": 0.08163265306122448,
+        "f1-score": 0.008588298443370907,
+        "support": 98.0
+      },
+      "Small": {
+        "precision": 0.018134715025906734,
+        "recall": 0.14035087719298245,
+        "f1-score": 0.03211930025810152,
+        "support": 399.0
+      },
+      "Medium": {
+        "precision": 0.07127127127127127,
+        "recall": 0.23623092236230922,
+        "f1-score": 0.109504767763765,
+        "support": 1507.0
+      },
+      "Large": {
+        "precision": 0.39794392523364486,
+        "recall": 0.26619154788697175,
+        "f1-score": 0.3189991009889122,
+        "support": 7998.0
+      },
+      "Enterprise": {
+        "precision": 0.4970845481049563,
+        "recall": 0.23874774954991,
+        "f1-score": 0.32256756756756755,
+        "support": 9998.0
+      },
+      "accuracy": 0.2468,
+      "macro avg": {
+        "precision": 0.19779340750789237,
+        "recall": 0.19263075001067959,
+        "f1-score": 0.15835580700434343,
+        "support": 20000.0
+      },
+      "weighted avg": {
+        "precision": 0.4133846287853874,
+        "recall": 0.2468,
+        "f1-score": 0.29775331446601433,
+        "support": 20000.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        8,
+        11,
+        25,
+        30,
+        24
+      ],
+      [
+        39,
+        56,
+        96,
+        101,
+        107
+      ],
+      [
+        136,
+        197,
+        356,
+        443,
+        375
+      ],
+      [
+        690,
+        1251,
+        2019,
+        2129,
+        1909
+      ],
+      [
+        892,
+        1573,
+        2499,
+        2647,
+        2387
+      ]
+    ],
+    "feature_importances": {
+      "company_age": 0.155041,
+      "Founded": 0.155323,
+      "industry_enc": 0.281607,
+      "country_enc": 0.337518,
+      "sector_enc": 0.068326,
+      "is_name_country_dup": 0.002183
+    }
+  },
+  "cross_validation": {
+    "folds": 5,
+    "strategy": "StratifiedKFold(shuffle=True)",
+    "rf_default_cv_accuracy_mean": 0.4918,
+    "rf_default_cv_accuracy_std": 0.0014,
+    "rf_balanced_cv_accuracy_mean": 0.2491,
+    "rf_balanced_cv_accuracy_std": 0.0066,
+    "dummy_baseline_accuracy": 0.4999
+  },
+  "random_forest": {
+    "accuracy": 0.2468,
+    "weighted_f1": 0.2978,
+    "cv_accuracy_mean": 0.2491,
+    "cv_accuracy_std": 0.0066,
+    "classification_report": {
+      "Micro": {
+        "precision": 0.004532577903682719,
+        "recall": 0.08163265306122448,
+        "f1-score": 0.008588298443370907,
+        "support": 98.0
+      },
+      "Small": {
+        "precision": 0.018134715025906734,
+        "recall": 0.14035087719298245,
+        "f1-score": 0.03211930025810152,
+        "support": 399.0
+      },
+      "Medium": {
+        "precision": 0.07127127127127127,
+        "recall": 0.23623092236230922,
+        "f1-score": 0.109504767763765,
+        "support": 1507.0
+      },
+      "Large": {
+        "precision": 0.39794392523364486,
+        "recall": 0.26619154788697175,
+        "f1-score": 0.3189991009889122,
+        "support": 7998.0
+      },
+      "Enterprise": {
+        "precision": 0.4970845481049563,
+        "recall": 0.23874774954991,
+        "f1-score": 0.32256756756756755,
+        "support": 9998.0
+      },
+      "accuracy": 0.2468,
+      "macro avg": {
+        "precision": 0.19779340750789237,
+        "recall": 0.19263075001067959,
+        "f1-score": 0.15835580700434343,
+        "support": 20000.0
+      },
+      "weighted avg": {
+        "precision": 0.4133846287853874,
+        "recall": 0.2468,
+        "f1-score": 0.29775331446601433,
+        "support": 20000.0
+      }
+    },
+    "feature_importances": {
+      "company_age": 0.155041,
+      "Founded": 0.155323,
+      "industry_enc": 0.281607,
+      "country_enc": 0.337518,
+      "sector_enc": 0.068326,
+      "is_name_country_dup": 0.002183
+    }
+  },
+  "logistic_regression": {
+    "accuracy": 0.4999,
+    "weighted_f1": 0.3332,
+    "classification_report": {
+      "Micro": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 98.0
+      },
+      "Small": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 399.0
+      },
+      "Medium": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1507.0
+      },
+      "Large": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 7998.0
+      },
+      "Enterprise": {
+        "precision": 0.4999,
+        "recall": 1.0,
+        "f1-score": 0.6665777718514567,
+        "support": 9998.0
+      },
+      "accuracy": 0.4999,
+      "macro avg": {
+        "precision": 0.09998,
+        "recall": 0.2,
+        "f1-score": 0.13331555437029136,
+        "support": 20000.0
+      },
+      "weighted avg": {
+        "precision": 0.24990001000000003,
+        "recall": 0.4999,
+        "f1-score": 0.33322222814854324,
+        "support": 20000.0
+      }
+    },
+    "note": "Replaced by DummyClassifier (most_frequent) \u2014 LR performed no better."
+  },
+  "feature_names": [
+    "company_age",
+    "Founded",
+    "industry_enc",
+    "country_enc",
+    "sector_enc",
+    "is_name_country_dup"
+  ],
+  "class_labels": [
+    "Micro",
+    "Small",
+    "Medium",
+    "Large",
+    "Enterprise"
+  ],
+  "model_note": "Target: size_band (derived from Number of employees; employees excluded to prevent leakage). No feature has a meaningful linear or monotone relationship with size_band (max |Pearson r| = 0.003, all Spearman p > 0.23). The dummy most-frequent-class baseline is 49.99%. RF (default) accuracy ~50% = at baseline. RF (balanced) accuracy ~26% = below accuracy baseline but achieves better per-class recall for minority classes (Micro, Small, Medium). Both results are analytically valid and reflect a genuine absence of predictive signal between org attributes and scale \u2014 NOT a model defect."
+}
