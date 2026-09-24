@@ -1,168 +1,388 @@
-# OrgInsight — Global Organizations Analytics + AI Project
+# OrgInsight
 
-A complete academic Data Analytics and AI project analysing **100,000 global organizations** across 243 countries and 147 industries.
-Built in 8 phases: data preparation → EDA/KPIs → SQL analytics → ML modelling → explainability → interactive dashboard → AI insights.
+OrgInsight is a complete end-to-end analytics and AI project for understanding global organizations at scale. The project analyzes 100,000 organizations across 243 countries and 147 industries, performs data quality checks, SQL-based analytics, machine learning, explainability analysis, and builds an interactive dashboard with AI-generated insights.
+
+This project demonstrates a full data science workflow from raw dataset ingestion to validated reporting and product-style dashboard delivery.
+
+## Table of Contents
+
+- Overview
+- Project goals
+- Tech stack
+- Dataset description
+- Repository structure
+- Installation and setup
+- Run the pipeline
+- Open the dashboard
+- Project phases and outputs
+- Key findings
+- Testing and validation
+- Screenshots
+- License and notes
 
 ---
 
-## Dataset
+## Overview
 
-`data/raw/organizations-100000.csv` — **100,000 rows × 9 columns** (never modified):
+OrgInsight answers a practical analytics question: what patterns exist across a synthetic global organization dataset, and can a machine learning pipeline produce interpretable insights from it?
 
-| Column | Type | Notes |
+The project is designed to:
+
+- clean and validate a large raw dataset
+- generate derived business features like company age and size bands
+- compute KPI summaries and distribution metrics
+- run SQL analytics using DuckDB
+- train and evaluate machine learning models
+- explain model behavior using SHAP and permutation importance
+- generate an interactive HTML dashboard
+- synthesize AI-based explainable findings from validated data
+
+---
+
+## Project Goals
+
+1. Build a robust and reproducible data preparation pipeline.
+2. Turn raw organizational data into business-ready analysis features.
+3. Create KPI-driven exploratory analytics on organization count, industry, geography, and employee patterns.
+4. Test whether employee-size classification can be predicted from metadata features.
+5. Evaluate whether model explanations are meaningful or indicate no real predictive signal.
+6. Deliver a browser-based dashboard for stakeholders.
+7. Provide a professional GitHub-ready documentation set.
+
+---
+
+## Tech Stack
+
+- Python 3.10+
+- Pandas
+- NumPy
+- Scikit-learn
+- DuckDB
+- Plotly
+- Matplotlib / Seaborn
+- Joblib
+- JSON validation workflow
+- Optional AI backends: Ollama or OpenAI-compatible API
+
+---
+
+## Dataset Description
+
+The canonical source file is:
+
+- `data/raw/organizations-100000.csv`
+
+Raw schema:
+
+| Column | Type | Description |
 |---|---|---|
-| `Index` | int | Row number |
-| `Organization Id` | string | Unique 15-char hex ID |
-| `Name` | string | Company name |
-| `Website` | string | URL |
-| `Country` | string | 243 unique values |
-| `Description` | string | Free text |
-| `Founded` | int | 1970–2022 |
-| `Industry` | string | 147 unique values |
-| `Number of employees` | int | 1–9,999 |
+| `Index` | integer | Row number |
+| `Organization Id` | string | Unique organization ID |
+| `Name` | string | Organization name |
+| `Website` | string | Website URL |
+| `Country` | string | Country code or country name |
+| `Description` | string | Free text summary |
+| `Founded` | integer | Foundation year |
+| `Industry` | string | Industry label |
+| `Number of employees` | integer | Employee count |
+
+Key dataset metrics:
+
+- 100,000 organizations
+- 243 countries
+- 147 industries
+- 5 derived size bands
+- dynamic company-age calculation based on current year
 
 ---
 
-## Project Structure
+## Repository Structure
 
-```
+```text
+.
 ├── data/
 │   ├── raw/
-│   │   └── organizations-100000.csv    # NEVER MODIFIED — canonical source
+│   │   └── organizations-100000.csv
 │   └── processed/
-│       ├── organizations_clean.csv     # 100,000 rows × 14 cols (9 raw + 5 derived)
-│       ├── preparation_report.json     # Phase 2 quality report
-│       ├── kpis.json                   # 60+ KPIs (reference_year dynamic)
-│       ├── kpis_validation.json        # 15/15 checks PASSED
-│       ├── sql_analytics.json          # 18 DuckDB queries (Q01–Q18)
+│       ├── organizations_clean.csv
+│       ├── preparation_report.json
+│       ├── kpis.json
+│       ├── kpis_validation.json
+│       ├── sql_analytics.json
 │       ├── sql_analytics_validation.json
-│       ├── ml_results.json             # Dummy + RF Default + RF Balanced
-│       ├── ml_validation.json          # 18/18 checks PASSED
-│       ├── explainability.json         # Gini MDI + Permutation + SHAP
+│       ├── ml_results.json
+│       ├── ml_validation.json
+│       ├── explainability.json
 │       ├── explainability_validation.json
-│       ├── rf_model.joblib             # RF Balanced (class_weight='balanced')
-│       ├── rf_model_default.joblib     # RF Default
+│       ├── rf_model.joblib
+│       ├── rf_model_default.joblib
 │       ├── scaler.joblib
 │       └── encoders.joblib
 ├── src/
-│   ├── data_preparation.py             # Phase 2 — cleaning & enrichment
-│   ├── eda_kpi.py                      # Phase 3 — EDA & KPI computation
-│   ├── sql_analytics.py                # Phase 4 — DuckDB analytical queries
-│   ├── ml_model.py                     # Phase 5 — feature engineering & ML
-│   ├── explainability.py               # Phase 6 — Gini MDI + Permutation + SHAP
-│   ├── generate_dashboard.py           # Phase 7 — interactive HTML dashboard
-│   └── ai_insights.py                  # Phase 8 — AI narrative layer
+│   ├── data_preparation.py
+│   ├── eda_kpi.py
+│   ├── sql_analytics.py
+│   ├── ml_model.py
+│   ├── explainability.py
+│   ├── generate_dashboard.py
+│   └── ai_insights.py
 ├── dashboard/
-│   └── index.html                      # ← Open in any browser (35 KB, 6 tabs)
+│   └── index.html
 ├── reports/
-│   ├── fig_*.png                       # 23 chart PNGs (EDA + ML + Explainability)
-│   └── ai_insights.md                  # Structured findings report
+│   ├── ai_insights.md
+│   └── fig_*.png
+├── docs/
+│   └── initial-audit.md
+├── screenshots/
+│   └── dashboard screenshots for README and demo
 ├── tests/
-│   └── test_pipeline.py                # 155 automated tests
-├── .env.example                        # Environment variable reference (copy to .env)
+│   └── test_pipeline.py
+├── .env.example
 ├── .gitignore
-├── run_pipeline.py                     # Full pipeline runner
-└── requirements.txt
+├── README.md
+├── requirements.txt
+├── run_pipeline.py
+└── organizations-100000.csv
 ```
 
 ---
 
-## Quick Start
+## Installation and Setup
 
-### Install dependencies
+Create a virtual environment and install dependencies:
+
 ```bash
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS/Linux
+source .venv/bin/activate
+
 pip install -r requirements.txt
 ```
 
-### Run full pipeline
+If you want to use AI inference features, configure the environment file:
+
+```bash
+copy .env.example .env
+```
+
+Then update `.env` with your model endpoint and API key when needed.
+
+---
+
+## Running the Project
+
+### Run the full pipeline
+
 ```bash
 python run_pipeline.py
 ```
 
-### Skip ML re-training (use existing model artefacts)
+### Skip retraining and use saved model artifacts
+
 ```bash
 python run_pipeline.py --skip-ml
 ```
 
-### Run with AI integration (Ollama)
+### Run with Ollama AI backend
+
 ```bash
 python run_pipeline.py --ai-endpoint http://localhost:11434/api/generate --ai-model llama3
 ```
 
-### Run with OpenAI-compatible API
-```bash
-# Option A — .env file (recommended, key never in shell history)
-cp .env.example .env
-# Edit .env: set AI_API_KEY, AI_ENDPOINT, AI_MODEL
-python src/ai_insights.py --openai
+### Run AI insights with OpenAI-compatible API
 
-# Option B — inline
-AI_API_KEY=sk-... python src/ai_insights.py \
-  --endpoint https://api.openai.com/v1/chat/completions \
-  --model gpt-4o --openai
+```bash
+python src/ai_insights.py --openai
+```
+
+Or via environment file injection:
+
+```bash
+AI_API_KEY=your_key python src/ai_insights.py --endpoint https://api.openai.com/v1/chat/completions --model gpt-4o --openai
 ```
 
 ### Run tests
+
 ```bash
 python -m pytest tests/ -v
-# 155 passed in ~9s
 ```
 
-### Open dashboard
-Open `dashboard/index.html` in any modern browser.
-
-## Screenshots
-
-The following screenshots capture the project dashboard and key visual outputs from the analytics workflow.
-
-### Dashboard screenshots
-
-![Dashboard overview 1](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.24%20PM.jpeg)
-
-![Dashboard overview 2](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.25%20PM.jpeg)
-
-![Dashboard overview 3](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.25%20PM%20(1).jpeg)
-
-![Dashboard overview 4](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.26%20PM.jpeg)
-
-![Dashboard overview 5](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.26%20PM%20(1).jpeg)
+The project includes 155 automated tests covering the pipeline, KPI generation, SQL analytics, model evaluation, explainability, dashboard content, and AI report generation.
 
 ---
 
-## Phase Summary
+## Open the Dashboard
 
-| Phase | Module | Output |
-|---|---|---|
-| 2 — Data Preparation | `src/data_preparation.py` | `organizations_clean.csv` (14 cols), `preparation_report.json` |
-| 3 — EDA & KPIs | `src/eda_kpi.py` | `kpis.json` (60+ KPIs), 13 EDA chart PNGs |
-| 4 — SQL Analytics | `src/sql_analytics.py` | `sql_analytics.json` (18 queries, Q01–Q18) |
-| 5 — ML Model | `src/ml_model.py` | `rf_model.joblib`, `ml_results.json` (Dummy + RF Default + RF Balanced) |
-| 6 — Explainability | `src/explainability.py` | `explainability.json` (Gini MDI + Permutation + SHAP), 5 plots |
-| 7 — Dashboard | `src/generate_dashboard.py` | `dashboard/index.html` (35 KB, 6 tabs, sector filter) |
-| 8 — AI Insights | `src/ai_insights.py` | `reports/ai_insights.md` |
+Open the generated dashboard in a browser:
+
+```text
+dashboard/index.html
+```
+
+Or serve it locally:
+
+```bash
+python -m http.server 8000 --directory dashboard
+```
+
+Then open:
+
+```text
+http://localhost:8000/
+```
+
+---
+
+## Project Workflow and Phases
+
+### Phase 1 — Audit and project inspection
+
+- review raw structure and data integrity
+- identify canonical data source
+- establish project scope and validation approach
+
+### Phase 2 — Data preparation
+
+Handled in `src/data_preparation.py`.
+
+Key activities:
+
+- load raw CSV data
+- clean invalid or malformed values
+- validate schema and null counts
+- derive business features such as:
+  - `company_age`
+  - `founding_decade`
+  - `size_band`
+  - `broad_sector`
+  - `is_name_country_dup`
+- generate the cleaned dataset and preparation report
+
+Output files:
+
+- `data/processed/organizations_clean.csv`
+- `data/processed/preparation_report.json`
+
+### Phase 3 — EDA and KPI analytics
+
+Handled in `src/eda_kpi.py`.
+
+This phase computes summary metrics, distribution plots, and high-level descriptive statistics across:
+
+- industry distribution
+- country distribution
+- employee counts
+- company age
+- founding year trend
+- sector summaries
+
+Output files:
+
+- `data/processed/kpis.json`
+- `reports/fig_*.png`
+
+### Phase 4 — SQL analytics
+
+Handled in `src/sql_analytics.py`.
+
+The project uses DuckDB to run analytical queries such as:
+
+- dataset totals
+- top industries and countries
+- sector share analysis
+- size-band distributions
+- founding trends
+- country diversity metrics
+- percentiles and enterprise summaries
+
+Output files:
+
+- `data/processed/sql_analytics.json`
+
+### Phase 5 — Machine learning
+
+Handled in `src/ml_model.py`.
+
+The task is a 5-class classification problem to predict employee size band based on metadata features, while excluding direct employee count leakage.
+
+Modeling summary:
+
+- target: employee size band
+- features used: `company_age`, `Founded`, `industry_enc`, `country_enc`, `sector_enc`, `is_name_country_dup`
+- model candidates: dummy baseline, Random Forest default, Random Forest balanced
+- evaluation metrics: accuracy, macro F1, weighted F1, CV stability
+
+Output files:
+
+- `data/processed/ml_results.json`
+- `data/processed/rf_model.joblib`
+- `data/processed/rf_model_default.joblib`
+- `data/processed/scaler.joblib`
+- `data/processed/encoders.joblib`
+
+### Phase 6 — Explainability
+
+Handled in `src/explainability.py`.
+
+This stage applies three explainability methods to interpret model outputs:
+
+- Gini impurity feature importance
+- permutation importance
+- SHAP values
+
+Output files:
+
+- `data/processed/explainability.json`
+- `reports/fig_feature_importance.png`
+- `reports/fig_permutation_importance.png`
+- `reports/fig_shap_importance.png`
+
+### Phase 7 — Dashboard generation
+
+Handled in `src/generate_dashboard.py`.
+
+This creates a browser-based interactive dashboard with sections for:
+
+- overview
+- industry analysis
+- geography analysis
+- founding trends
+- machine learning results
+- AI insights
+
+Output file:
+
+- `dashboard/index.html`
+
+### Phase 8 — AI insights layer
+
+Handled in `src/ai_insights.py`.
+
+This layer reads valid, previously computed metrics from processed files and passes them to an AI endpoint. It avoids fabricating unsupported values and supports both OpenAI-compatible and Ollama-compatible APIs.
+
+Output file:
+
+- `reports/ai_insights.md`
 
 ---
 
 ## Key Findings
 
-### Data Quality (Phase 2)
+### Data quality
 
-All results verified from `data/processed/preparation_report.json`:
+Validated checks show:
 
-- **Zero nulls** across all 9 raw columns (pre- and post-processing)
-- **Zero full-row duplicates**, zero `Organization Id` duplicates
-- **Zero type errors**: Founded and Number of employees coerced cleanly; 0 failures
-- **Zero statistical outliers** in employee count (IQR fences: −4,984.5 to 14,995.5; z-score range: −1.73 to +1.73)
-- **764 rows** share the same Name+Country — all have unique `Organization Id` values and different Industry/Founded. Flagged via `is_name_country_dup` (not dropped)
-- **5 derived columns added**: `company_age`, `founding_decade`, `size_band`, `broad_sector`, `is_name_country_dup`
-- `company_age` reference year: **dynamic** (`datetime.date.today().year`, currently 2026)
-- Known limitation: `broad_sector = "Other"` covers **70,070 rows (70.1%)** — 70 of 147 industry labels match none of the 5 keyword-based sector mappings
+- zero nulls in source columns
+- zero duplicate `Organization Id` values
+- zero full-row duplicates
+- clean numeric conversion for `Founded` and `Number of employees`
+- low outlier pressure and stable data quality
 
----
+### Dataset summary
 
-### Dataset Overview (Phase 3 — KPIs)
-
-All values from `data/processed/kpis.json`:
+From processed KPI generation:
 
 | KPI | Value |
 |---|---|
@@ -171,233 +391,132 @@ All values from `data/processed/kpis.json`:
 | Total countries | 243 |
 | Average employees | 5,004.0 |
 | Median employees | 4,998.0 |
-| Std dev employees | 2,889.5 |
-| Employee skewness | 0.001 (near-symmetric) |
-| Employee kurtosis | −1.197 (platykurtic — uniform-like) |
-| Employee range | 1 – 9,999 |
 | Average company age | 30.3 years |
-| Median company age | 30.0 years |
-| Company age range | 4 – 56 years (ref year: 2026) |
-| Founded range | 1970 – 2022 |
-| Peak founding year | 1998 (2,022 orgs) |
-| Avg orgs founded per year | ~1,887 |
-| Industry HHI | 0.0068 (near-perfectly uniform) |
-| Industry count range | 626 – 747 orgs per industry |
-| Top 10 countries share | 5.34% (wide geographic spread) |
-| Name+Country duplicates | 764 rows flagged |
+| Peak founding year | 1998 |
+| Top 10 countries share | 5.34% |
 
-#### Size Band Distribution
+### Broad sector distribution
 
-| Band | Employee Range | Count | % |
-|---|---|---|---|
-| Micro | < 50 | 492 | 0.5% |
-| Small | 50 – 249 | 1,994 | 2.0% |
-| Medium | 250 – 999 | 7,537 | 7.5% |
-| Large | 1,000 – 4,999 | 39,987 | 40.0% |
-| Enterprise | 5,000+ | 49,990 | 50.0% |
+| Sector | Count | Share |
+|---|---:|---:|
+| Other | 70,070 | 70.07% |
+| Technology | 9,536 | 9.54% |
+| Healthcare | 5,413 | 5.41% |
+| Finance | 5,407 | 5.41% |
+| Manufacturing | 4,807 | 4.81% |
+| Services | 4,767 | 4.77% |
 
-#### Top 10 Industries (by organization count)
+### Top industries
 
 | Industry | Count |
-|---|---|
+|---|---:|
 | Insurance | 747 |
 | Hospital / Health Care | 739 |
 | Leisure / Travel | 736 |
 | Logistics / Procurement | 732 |
 | Non-Profit / Volunteering | 729 |
-| Publishing Industry | 726 |
-| Farming | 722 |
-| Religious Institutions | 721 |
-| Packaging / Containers | 721 |
-| Electrical / Electronic Manufacturing | 718 |
 
-#### Top 10 Countries (by organization count)
+### Top countries
 
 | Country | Count |
-|---|---|
+|---|---:|
 | Congo | 847 |
 | Korea | 810 |
 | Lebanon | 477 |
 | Iraq | 470 |
 | Turkey | 469 |
-| Austria | 455 |
-| Seychelles | 454 |
-| Mauritius | 453 |
-| Singapore | 452 |
-| Israel | 450 |
 
-#### Broad Sector Breakdown
+### Model findings
 
-| Sector | Count | % | Avg Employees |
-|---|---|---|---|
-| Other | 70,070 | 70.07% | 5,014.6 |
-| Technology | 9,536 | 9.54% | 5,017.9 |
-| Healthcare | 5,413 | 5.41% | 4,918.5 |
-| Finance | 5,407 | 5.41% | 4,972.8 |
-| Manufacturing | 4,807 | 4.81% | 5,013.1 |
-| Services | 4,767 | 4.77% | 4,943.1 |
+The machine learning task is informative but the underlying synthetic dataset has limited predictive structure.
 
-*Note: Avg employees are near-identical across all sectors (range: 4,918–5,018) — consistent with the uniform employee-count distribution in this synthetic dataset.*
+- Dummy baseline accuracy: about 49.99%
+- Random Forest default accuracy: about 49.25%
+- Random Forest balanced accuracy: about 24.68%
+- Most feature-target correlations are near zero
+- The dataset appears to assign employee counts largely independently of the metadata features
+
+This is a key project outcome: the model does not uncover a strong causal or predictive relationship in the synthetic data, and the explainability findings must be interpreted cautiously.
 
 ---
 
-### SQL Analytics (Phase 4)
+## Validation and Testing
 
-18 DuckDB queries (Q01–Q18) covering:
+The repository includes validation logic and a full automated test suite.
 
-| Query | Topic |
-|---|---|
-| Q01 | Dataset totals |
-| Q02 | Top 20 industries by count |
-| Q03 | Top 20 countries by count |
-| Q04 | Sector overview with % share |
-| Q05 | Size band distribution |
-| Q06 | Founding decade trends |
-| Q07 | Top industry per top country |
-| Q08 | Top/Bottom 10 industries by avg employees |
-| Q09 | Founding trend by year (all 53 years) |
-| Q10 | Sector × size band crosstab |
-| Q11 | Most industrially diverse countries |
-| Q12 | Employee percentile distribution (p10–p90) |
-| Q13 | Top/Bottom 10 countries by avg employees |
-| Q14 | Year-on-year founding count change |
-| Q15 | Name+Country duplicate flag summary |
-| Q16 | Industry spread uniformity (HHI) |
-| Q17 | Peak and trough founding years |
-| Q18 | Enterprise rate by sector |
+Validation includes:
 
----
+- schema checks
+- null checks
+- duplicate checks
+- feature engineering validation
+- result file integrity checks
+- dashboard file checks
+- AI context validation
 
-### ML Model (Phase 5)
-
-**Task**: Multi-class classification — predict company size band (5 classes) from 6 features.
-**Train/test split**: 80,000 / 20,000 rows (stratified).
-**Features**: `company_age`, `Founded`, `industry_enc`, `country_enc`, `sector_enc`, `is_name_country_dup`
-**Excluded**: `Number of employees` (directly defines `size_band` — including it is data leakage).
-
-All values from `data/processed/ml_results.json`:
-
-| Model | Accuracy | Macro F1 | Weighted F1 | ROC-AUC (OvR) |
-|---|---|---|---|---|
-| Dummy (most-frequent) | 49.99% | — | — | — |
-| RF Default | 49.25% | — | — | 0.4953 |
-| RF Balanced | 24.68% | 0.1584 | 0.2978 | 0.4955 |
-
-**5-Fold Cross-Validation (RF Balanced)**: 24.91% ± 0.66%
-**5-Fold Cross-Validation (RF Default)**: 49.18% ± 0.14%
-
-**Max |Pearson r| (feature vs target)**: 0.003398 — all Spearman p > 0.23
-
-**Finding**: RF Default accuracy equals the dummy baseline; RF Balanced trades overall accuracy for minority-class recall. All feature–target correlations are statistically indistinguishable from zero. This is a genuine null result — the synthetic dataset assigns employee counts independently of all other fields. These are *association* findings — **NOT causal claims**.
-
----
-
-### Explainability (Phase 6)
-
-Three independent methods applied to the RF Balanced model. All values from `data/processed/explainability.json`:
-
-#### 1. Gini MDI (Mean Decrease in Impurity)
-
-| Feature | Gini MDI % |
-|---|---|
-| Country (enc) | 33.75% |
-| Industry (enc) | 28.16% |
-| Year Founded | 15.53% |
-| Company Age | 15.50% |
-| Broad Sector (enc) | 6.83% |
-| Name-Country Dup Flag | 0.22% |
-
-*⚠ Gini MDI overstates high-cardinality encoded features. Country has 243 unique values; Industry has 147.*
-
-#### 2. Permutation Importance — Decisive Test
-
-*Method: sklearn permutation_importance, accuracy scoring, 5 repeats, test set = 20,000 rows*
-*Negative/near-zero values = shuffling the feature does not reduce accuracy = no predictive signal.*
-
-| Feature | Mean Accuracy Drop |
-|---|---|
-| Year Founded | −0.07804 |
-| Company Age | −0.07585 |
-| Industry (enc) | −0.00565 |
-| Broad Sector (enc) | −0.00476 |
-| Country (enc) | −0.00176 |
-| Name-Country Dup Flag | +0.00017 |
-
-**All values near zero or negative — confirming no genuine predictive signal in any feature.**
-
-#### 3. SHAP (TreeExplainer, mean |SHAP|)
-
-*Sample: 1,697 rows (stratified from test set)*
-
-| Feature | Mean |SHAP| |
-|---|---|
-| Country (enc) | 0.020374 |
-| Industry (enc) | 0.018239 |
-| Company Age | 0.012699 |
-| Year Founded | 0.012309 |
-| Broad Sector (enc) | 0.007187 |
-| Name-Country Dup Flag | 0.000178 |
-
-#### Cross-Method Agreement
-
-| Method | Top Feature |
-|---|---|
-| Gini MDI | Country (enc) |
-| Permutation | Name-Country Dup Flag *(noise — all near zero)* |
-| SHAP | Country (enc) |
-
-Methods do **not** agree on a single top feature. Gini and SHAP both rank Country (enc) highest due to its 243 unique encoded values; permutation importance, the most reliable measure, shows all features are effectively uninformative.
-
----
-
-### Dashboard (Phase 7)
-
-`dashboard/index.html` — 35 KB, opens in any modern browser, no server required.
-
-**6 tabs**: Overview · Industry · Geography · Founding Trends · ML Results · AI Insights
-**Sector filter** on Overview tab (All Sectors + 6 individual sectors).
-All KPI cards and chart values are dynamically loaded from `kpis.json` at generation time — no hard-coded numbers.
-
----
-
-## AI Layer (Phase 8)
-
-[`src/ai_insights.py`](src/ai_insights.py) feeds only **validated analytical results** to an LLM. It never fabricates metrics.
-
-- API key read from `AI_API_KEY` environment variable — **never hard-coded**
-- Copy `.env.example` → `.env` and set your key; `.env` is git-ignored
-- Structured fallback report generated automatically when no API endpoint is configured
-- Timeout configurable via `--timeout` (default: 120 s); HTTP errors reported with status code
-- Supports both Ollama-compatible and OpenAI-compatible endpoints
-- `.env` values loaded without requiring `python-dotenv` (built-in parser in `ai_insights.py`)
-
----
-
-## Tests
-
-**155 automated tests** covering all phases:
+Automated tests:
 
 ```bash
 python -m pytest tests/ -v
-# 155 passed in ~9s
 ```
 
-| Test class | Tests | Coverage |
-|---|---|---|
-| `TestDataPreparation` | 27 | Raw schema, nulls, types, derived columns, size bands, sectors, duplicates, outliers |
-| `TestKPIs` | 28 | KPI values, validation file, all charts generated, skewness, HHI, concentrations |
-| `TestSQLAnalytics` | 27 | All 18 queries present, row counts, totals, peak year, cross-tab, dup flag |
-| `TestMLModel` | 25 | Model files, accuracy bounds, CV stability, correlations, ROC-AUC, plots |
-| `TestExplainability` | 21 | Gini sum, SHAP non-negative, permutation present, cross-method, all plots |
-| `TestDashboard` | 4 | File exists, size, Plotly present, real KPI values in HTML |
-| `TestAIInsights` | 20 | Output content, actual data used, no hard-coded key, `.env.example`, `.gitignore`, fallback |
-| **Total** | **155** | |
+The test suite covers:
 
-`TestAIInsights` specifically verifies:
-- Report references all 3 explainability methods (Gini MDI, Permutation, SHAP)
-- `load_validated_context()` values exactly match source JSON files (no fabrication)
-- Leakage guard: employee count not in feature list
-- No `sk-...`-style API key pattern in source code
+- data preparation
+- KPI correctness
+- SQL analytics queries
+- machine learning outcomes
+- explainability outputs
+- dashboard generation
+- AI insight generation
+
+---
+
+## Screenshots
+
+The project includes dashboard and analytics screenshots in the `screenshots` folder.
+
+![Dashboard screenshot 1](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.24%20PM.jpeg)
+
+![Dashboard screenshot 2](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.25%20PM.jpeg)
+
+![Dashboard screenshot 3](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.25%20PM%20(1).jpeg)
+
+![Dashboard screenshot 4](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.26%20PM.jpeg)
+
+![Dashboard screenshot 5](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.26%20PM%20(1).jpeg)
+
+---
+
+## Notes and Caveats
+
+- The dataset is synthetic and intentionally designed for pattern exploration rather than real-world causal inference.
+- Employee count distribution is nearly uniform, which limits strong predictive signal.
+- Explainability methods can rank high-cardinality encoded features highly, even when the model has little real predictive power.
+- The project validates findings from generated JSON artifacts before using them in AI summaries.
+
+---
+
+## Summary
+
+OrgInsight is a practical, full-stack-style analytics project that combines:
+
+- data engineering
+- KPI reporting
+- SQL analytics
+- predictive modeling
+- explainability
+- dashboarding
+- AI-generated narrative summaries
+
+It is designed as both a documentation-rich project and a demonstration of professional end-to-end data science workflow execution.
+
+---
+
+## License
+
+This project is intended for educational and demonstration purposes. Please check the repository policies and any applicable academic or organizational requirements before reuse in production environments.
+
 - `.env.example` exists and documents `AI_API_KEY`
 - `.gitignore` excludes `.env`
 - Fallback runs cleanly with empty endpoint and produces valid report

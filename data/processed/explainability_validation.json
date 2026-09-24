@@ -5,7 +5,7 @@
   "checks": {
     "gini_has_all_feature_labels": {
       "passed": true,
-      "note": "Keys: {'Year Founded', 'Industry (enc)', 'Country (enc)', 'Broad Sector (enc)', 'Name-Country Dup Flag', 'Company Age'}"
+      "note": "Keys: {'Company Age', 'Broad Sector (enc)', 'Country (enc)', 'Name-Country Dup Flag', 'Industry (enc)', 'Year Founded'}"
     },
     "gini_importances_sum_to_1": {
       "passed": true,
@@ -21,7 +21,7 @@
     },
     "permutation_has_all_features": {
       "passed": true,
-      "note": "Perm keys: {'Year Founded', 'Industry (enc)', 'Country (enc)', 'Broad Sector (enc)', 'Name-Country Dup Flag', 'Company Age'}"
+      "note": "Perm keys: {'Company Age', 'Broad Sector (enc)', 'Country (enc)', 'Name-Country Dup Flag', 'Industry (enc)', 'Year Founded'}"
     },
     "permutation_n_repeats_recorded": {
       "passed": true,
@@ -37,7 +37,7 @@
     },
     "shap_keys_match_features": {
       "passed": true,
-      "note": "SHAP keys: {'Year Founded', 'Industry (enc)', 'Country (enc)', 'Broad Sector (enc)', 'Name-Country Dup Flag', 'Company Age'}"
+      "note": "SHAP keys: {'Company Age', 'Broad Sector (enc)', 'Country (enc)', 'Name-Country Dup Flag', 'Industry (enc)', 'Year Founded'}"
     },
     "shap_values_non_negative": {
       "passed": true,

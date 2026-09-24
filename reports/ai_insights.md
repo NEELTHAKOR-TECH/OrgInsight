@@ -1,5 +1,5 @@
 # OrgInsight — Structured Findings Report
-*Generated: 2026-09-23 23:52 (structured fallback — no AI API)*
+*Generated: 2026-09-24 23:10 (structured fallback — no AI API)*
 
 ## Dataset Overview
 - **100,000 organizations** across **243 countries** and **147 industries**

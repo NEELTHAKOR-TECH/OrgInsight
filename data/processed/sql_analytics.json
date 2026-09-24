@@ -551,7 +551,7 @@
     },
     {
       "Country": "Mauritius",
-      "top_industry": "Mining / Metals",
+      "top_industry": "Electrical / Electronic Manufacturing",
       "top_industry_count": 7,
       "country_total_orgs": 453,
       "top_industry_pct": 1.5
@@ -564,15 +564,15 @@
       "top_industry_pct": 2.0
     },
     {
-      "Country": "Israel",
-      "top_industry": "Translation / Localization",
+      "Country": "Costa Rica",
+      "top_industry": "Consumer Services",
       "top_industry_count": 8,
       "country_total_orgs": 450,
       "top_industry_pct": 1.8
     },
     {
-      "Country": "Costa Rica",
-      "top_industry": "Consumer Services",
+      "Country": "Israel",
+      "top_industry": "Translation / Localization",
       "top_industry_count": 8,
       "country_total_orgs": 450,
       "top_industry_pct": 1.8
@@ -592,18 +592,18 @@
       "top_industry_pct": 2.2
     },
     {
-      "Country": "Antarctica (the territory South of 60 deg S)",
-      "top_industry": "Furniture",
-      "top_industry_count": 8,
-      "country_total_orgs": 445,
-      "top_industry_pct": 1.8
-    },
-    {
       "Country": "Tunisia",
       "top_industry": "Hospitality",
       "top_industry_count": 10,
       "country_total_orgs": 445,
       "top_industry_pct": 2.2
+    },
+    {
+      "Country": "Antarctica (the territory South of 60 deg S)",
+      "top_industry": "Furniture",
+      "top_industry_count": 8,
+      "country_total_orgs": 445,
+      "top_industry_pct": 1.8
     }
   ],
   "Q08_top10_industries_by_avg_employees": [
@@ -1207,22 +1207,16 @@
       "pct_of_all_industries": 100.0
     },
     {
-      "Country": "Azerbaijan",
-      "unique_industries": 145,
-      "org_count": 434,
-      "pct_of_all_industries": 98.6
-    },
-    {
       "Country": "Nicaragua",
       "unique_industries": 145,
       "org_count": 401,
       "pct_of_all_industries": 98.6
     },
     {
-      "Country": "Iraq",
-      "unique_industries": 144,
-      "org_count": 470,
-      "pct_of_all_industries": 98.0
+      "Country": "Azerbaijan",
+      "unique_industries": 145,
+      "org_count": 434,
+      "pct_of_all_industries": 98.6
     },
     {
       "Country": "Turkey",
@@ -1231,33 +1225,9 @@
       "pct_of_all_industries": 98.0
     },
     {
-      "Country": "Guatemala",
+      "Country": "Iraq",
       "unique_industries": 144,
-      "org_count": 432,
-      "pct_of_all_industries": 98.0
-    },
-    {
-      "Country": "Seychelles",
-      "unique_industries": 144,
-      "org_count": 454,
-      "pct_of_all_industries": 98.0
-    },
-    {
-      "Country": "San Marino",
-      "unique_industries": 144,
-      "org_count": 406,
-      "pct_of_all_industries": 98.0
-    },
-    {
-      "Country": "Reunion",
-      "unique_industries": 144,
-      "org_count": 437,
-      "pct_of_all_industries": 98.0
-    },
-    {
-      "Country": "Western Sahara",
-      "unique_industries": 144,
-      "org_count": 428,
+      "org_count": 470,
       "pct_of_all_industries": 98.0
     },
     {
@@ -1267,15 +1237,39 @@
       "pct_of_all_industries": 98.0
     },
     {
-      "Country": "Saint Barthelemy",
-      "unique_industries": 143,
-      "org_count": 390,
-      "pct_of_all_industries": 97.3
+      "Country": "Seychelles",
+      "unique_industries": 144,
+      "org_count": 454,
+      "pct_of_all_industries": 98.0
     },
     {
-      "Country": "Mongolia",
+      "Country": "Guatemala",
+      "unique_industries": 144,
+      "org_count": 432,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "San Marino",
+      "unique_industries": 144,
+      "org_count": 406,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "Western Sahara",
+      "unique_industries": 144,
+      "org_count": 428,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "Reunion",
+      "unique_industries": 144,
+      "org_count": 437,
+      "pct_of_all_industries": 98.0
+    },
+    {
+      "Country": "Bermuda",
       "unique_industries": 143,
-      "org_count": 408,
+      "org_count": 442,
       "pct_of_all_industries": 97.3
     },
     {
@@ -1285,9 +1279,15 @@
       "pct_of_all_industries": 97.3
     },
     {
-      "Country": "Puerto Rico",
+      "Country": "Saint Kitts and Nevis",
       "unique_industries": 143,
-      "org_count": 393,
+      "org_count": 429,
+      "pct_of_all_industries": 97.3
+    },
+    {
+      "Country": "Mongolia",
+      "unique_industries": 143,
+      "org_count": 408,
       "pct_of_all_industries": 97.3
     }
   ],
