@@ -111,6 +111,22 @@ python -m pytest tests/ -v
 ### Open dashboard
 Open `dashboard/index.html` in any modern browser.
 
+## Screenshots
+
+The following screenshots capture the project dashboard and key visual outputs from the analytics workflow.
+
+### Dashboard screenshots
+
+![Dashboard overview 1](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.24%20PM.jpeg)
+
+![Dashboard overview 2](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.25%20PM.jpeg)
+
+![Dashboard overview 3](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.25%20PM%20(1).jpeg)
+
+![Dashboard overview 4](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.26%20PM.jpeg)
+
+![Dashboard overview 5](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.26%20PM%20(1).jpeg)
+
 ---
 
 ## Phase Summary
