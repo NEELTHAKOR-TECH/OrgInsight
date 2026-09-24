@@ -329,6 +329,18 @@ The project is designed so the AI layer only processes validated, trusted metric
 
 The project includes dashboard and analytics screenshots in the `screenshots/` folder. These visuals are useful for documentation and demonstration purposes.
 
+### Dashboard Screenshots
+
+![Dashboard screenshot 1](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.24%20PM.jpeg)
+
+![Dashboard screenshot 2](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.25%20PM.jpeg)
+
+![Dashboard screenshot 3](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.25%20PM%20(1).jpeg)
+
+![Dashboard screenshot 4](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.26%20PM.jpeg)
+
+![Dashboard screenshot 5](screenshots/WhatsApp%20Image%202026-09-24%20at%2010.00.26%20PM%20(1).jpeg)
+
 ---
 
 ## 12. Important Notes
